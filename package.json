@@ -1,0 +1,12 @@
+{
+  "name": "opnsense-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "SASS_WARN_DEPRECATED=false sass assets/stylesheets/main.scss build/css/main.css --no-source-map",
+    "watch": "SASS_WARN_DEPRECATED=false sass --watch assets/stylesheets/main.scss:build/css/main.css --no-source-map",
+    "clean": "rm -rf build/css/*"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
