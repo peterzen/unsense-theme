@@ -1,4 +1,70 @@
-@import "variables";
+
+:root {
+    // Base Colors
+    --bs-body-bg: #1e1f23;
+    --bs-body-color: #d4d4d4;
+    --bs-border-color: #3a3b41;
+  
+    // Theme Palette
+    --bs-primary: #3794ff;
+    --bs-secondary: #5c6370;
+    --bs-success: #00d084;
+    --bs-info: #5bc0de;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #ff4d4f;
+    --bs-light: #2a2b30;
+    --bs-dark: #111216;
+  
+    // Links
+    --bs-link-color: #3794ff;
+    --bs-link-hover-color: #61aaff;
+  
+    // Buttons
+    --bs-btn-color: #d4d4d4;
+    --bs-btn-bg: #2a2b30;
+    --bs-btn-border-color: #3a3b41;
+    --bs-btn-hover-color: #d4d4d4;
+    --bs-btn-hover-bg: #42464d;
+    --bs-btn-hover-border-color: #4c4f58;
+  
+    // Forms
+    --bs-input-bg: #2a2b30;
+    --bs-input-color: #d4d4d4;
+    --bs-input-border-color: #3a3b41;
+    --bs-input-focus-bg: #2a2b30;
+    --bs-input-focus-color: #d4d4d4;
+    --bs-input-focus-border-color: #3794ff;
+    --bs-input-placeholder-color: #888;
+  
+    // Tables
+    --bs-table-bg: #2a2b30;
+    --bs-table-striped-bg: #242529;
+    --bs-table-hover-bg: #42464d;
+    --bs-table-border-color: #3a3b41;
+    --bs-table-color: #d4d4d4;
+  
+    // Alerts
+    --bs-alert-bg: #2a2b30;
+    --bs-alert-color: #d4d4d4;
+    --bs-alert-border-color: #3a3b41;
+  
+    // Navs
+    --bs-nav-link-color: #d4d4d4;
+    --bs-nav-link-hover-color: #3794ff;
+    --bs-nav-tabs-border-color: #3a3b41;
+    --bs-nav-tabs-link-active-color: #3794ff;
+    --bs-nav-tabs-link-active-bg: #2a2b30;
+  
+    // Pagination
+    --bs-pagination-color: #d4d4d4;
+    --bs-pagination-bg: #2a2b30;
+    --bs-pagination-border-color: #3a3b41;
+    --bs-pagination-hover-color: #d4d4d4;
+    --bs-pagination-hover-bg: #42464d;
+    --bs-pagination-hover-border-color: #4c4f58;
+  }
+  
+  @import "variables";
 
 // @import "fonts";
 
@@ -12,7 +78,7 @@
 @import "bootstrap/print";
 @import "bootstrap/glyphicons";
 
-// Core CSS
+// // Core CSS
 @import "bootstrap/scaffolding";
 @import "bootstrap/type";
 @import "bootstrap/code";
@@ -21,7 +87,7 @@
 @import "bootstrap/forms";
 @import "bootstrap/buttons";
 
-// Components
+// // Components
 @import "bootstrap/component-animations";
 @import "bootstrap/dropdowns";
 @import "bootstrap/button-groups";
@@ -44,28 +110,28 @@
 @import "bootstrap/wells";
 @import "bootstrap/close";
 
-// Components w/ JavaScript
-@import "bootstrap/modals";
-@import "bootstrap/tooltip";
-@import "bootstrap/popovers";
-@import "bootstrap/carousel";
+// // Components w/ JavaScript
+// @import "bootstrap/modals";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popovers";
+// @import "bootstrap/carousel";
 
-// Utility classes
+// // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 
-* {
-    -webkit-font-smoothing: antialiased;
-}
+// * {
+//     -webkit-font-smoothing: antialiased;
+// }
 
-html, body {
-    height: 100%;
-    background-color: #000000;
-}
+// html, body {
+//     height: 100%;
+//     background-color: #000000;
+// }
 
-body {
-    min-width: 320px;
-    touch-action: manipulation;
-}
+// body {
+//     min-width: 320px;
+//     touch-action: manipulation;
+// }
 
 @import "custom";

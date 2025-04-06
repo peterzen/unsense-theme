@@ -5,18 +5,18 @@
   top: 0;
   right: 0;
   left: 0;
-  background: map-get($colors, background-secondary);
+  // background: map-get($colors, background-secondary);
 
   .navbar-default {
       min-height: 60px;
-      color: rgba(87, 87, 87, 0.67);
+      // color: rgba(87, 87, 87, 0.67);
       border: 0;
-      background:map-get($colors, background-secondary);
+      // background:map-get($colors, background-secondary);
       box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
   }
 
   .navbar-text {
-      color: #494949;
+      // color: #494949;
   }
 
   .navbar-right {
@@ -29,42 +29,42 @@
       width: 250px;
       height: 100%;
       text-align: center;
-      color: #000;
+      // color: #000;
       // background: #3498db;
 
-      &::before {
-          font-size: 16px;
-          font-weight: 500;
-          display: inline-block;
-          content: "OPNSense";
-          color: #fff;
-      }
+      // &::before {
+          // font-size: 16px;
+          // font-weight: 500;
+          // display: inline-block;
+          // content: "OPNSense";
+          // color: #fff;
+      // }
 
-      &:hover, &:focus {
-          background: #3498db;
-      }
+      // &:hover, &:focus {
+      //     background: #3498db;
+      // }
 
-      .brand-logo, .brand-icon {
-          width: 1px;
-          height: 1px;
-      }
+      // .brand-logo, .brand-icon {
+      //     width: 1px;
+      //     height: 1px;
+      // }
   }
 
-  .navbar-toggle {
-      margin-top: 14px;
+  // .navbar-toggle {
+  //     margin-top: 14px;
 
-      .icon-bar {
-          background-color: map-get($colors, background-primary);
-      }
+  //     .icon-bar {
+  //         background-color: map-get($colors, background-primary);
+  //     }
 
-      &:hover, &:focus {
-          background-color: transparent;
+  //     &:hover, &:focus {
+  //         background-color: transparent;
 
-          .icon-bar {
-              background-color: map-get($colors, background-tertiary);
-          }
-      }
-  }
+  //         .icon-bar {
+  //             background-color: map-get($colors, background-tertiary);
+  //         }
+  //     }
+  // }
 }
 
 .page-content {
@@ -90,7 +90,7 @@
 .page-content-head {
   padding-top: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid rgba(#D9D9D9, .50);
+  // border-bottom: 1px solid rgba(#D9D9D9, .50);
   background: map-get($colors, background-primary);
 
   .navbar-nav {
@@ -119,8 +119,8 @@
   height: 100% !important;
   height: calc(100% - 60px) !important;
   margin-top: 60px;
-  border-right: 1px solid rgba(0, 0, 0, .15);
-  background: map-get($colors, navbg);
+  // border-right: 1px solid rgba(0, 0, 0, .15);
+  // background: map-get($colors, navbg);
 
   @extend .hidden-xs;
 }
@@ -146,13 +146,13 @@
   width: 100%;
   padding: 20px 0;
   // border-top: 1px solid rgba(#D9D9D9, .50);
-  background: map-get($colors, background-tertiary);
+  // background: map-get($colors, background-tertiary);
 }
 
 .content-box {
   // border: 1px solid map-get($colors, bordergrey);
   border-radius: 3px;
-  background: map-get($colors, background-tertiary);
+  // background: map-get($colors, background-tertiary);
 
   @extend .clearfix;
 
@@ -255,7 +255,7 @@ div.content-box.wizard {
       //border: 1px solid map-get($colors, bordergrey);
       margin-bottom: 8px;
       border-radius: 4px;
-      background: map-get($colors, background-primary);
+      // background: map-get($colors, background-primary);
 
       box-shadow: 0 1px 8px rgba(#000, .1);
   }
@@ -265,7 +265,7 @@ div.content-box.wizard {
       padding: 0 20px;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
-      background: map-get($colors, primary);
+      // background: map-get($colors, primary);
 
       img {
           display: none;
@@ -284,7 +284,7 @@ div.content-box.wizard {
               font-weight: 500;
               display: inline-block;
               content: "OPNSense";
-              color: #fff;
+              // color: #fff;
           }
 
           &::after {
@@ -292,7 +292,7 @@ div.content-box.wizard {
               font-weight: 400;
               display: inline-block;
               content: "AdvancedOPN Theme";
-              color: #fafafa;
+              // color: #fafafa;
           }
       }
   }
@@ -309,11 +309,11 @@ div.content-box.wizard {
 
       a {
           text-decoration: none;
-          color: #7d7d7d;
+          // color: #7d7d7d;
 
           &:hover {
               text-decoration: underline;
-              color: darken(#7d7d7d, 10%);
+              // color: darken(#7d7d7d, 10%);
           }
       }
   }
@@ -345,7 +345,7 @@ div.content-box.wizard {
 
   &.collapsed .caret {
       border-top: 0;
-      border-bottom: 4px solid green;
+      // border-bottom: 4px solid green;
   }
 }
 
@@ -434,7 +434,6 @@ main.page-content.col-lg-12 {
               &::before {
                   opacity: 1;
                   background-color: map-get($colors, background-tertiary);
-
               }
           }
 
@@ -447,7 +446,7 @@ main.page-content.col-lg-12 {
   overflow: hidden;
   width: 70px;
   border: none !important;
-  background-color: transparent !important;
+  // background-color: transparent !important;
 
   > div {
       &.row {
@@ -472,7 +471,7 @@ main.page-content.col-lg-12 {
               text-align: center;
               color: #a6adb3;
               border-right: 1px solid lighten(map-get($colors, navbg), 5%);
-              border-bottom: 2px solid lighten(map-get($colors, navbg), 5%);
+              // border-bottom: 2px solid #00ff00;
 
               > span {
                   &.fa, &.glyphicon {
@@ -620,7 +619,7 @@ ul.nav > li.dropdown > ul.dropdown-menu > li > a {
   color: #777777;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  background: #fcfcfc;
+  // background: #fcfcfc;
 }
 
 .nav-tabs > li > a {
@@ -670,7 +669,7 @@ ul.nav > li.dropdown > ul.dropdown-menu > li > a {
       background: map-get($colors, lightgrey);
 
       > a {
-          font-family: "Inter", serif;
+          // font-family: "Inter", serif;
           color: map-get($colors, darkgrey);
 
           @media (min-width: $screen-sm-min) {
@@ -721,24 +720,24 @@ ul.nav > li.dropdown > ul.dropdown-menu > li > a {
 .bootstrap-select {
 
   .btn-default {
-      color: #76838f;
-      border: 1px solid $input-border;
-      background: #fff;
+      // color: #76838f;
+      // border: 1px solid $input-border;
+      // background: #fff;
 
       &:focus {
-          border-color: $input-border-focus;
-          background: #fff;
+          // border-color: $input-border-focus;
+          // background: #fff;
       }
   }
 
   &.open > .btn-default {
-      color: #76838f;
-      border-color: $input-border-focus;
-      background: #fff;
+      // color: #76838f;
+      // border-color: $input-border-focus;
+      // background: #fff;
   }
 
   .dropdown-toggle:focus {
-      outline-color: #fff !important;
+      // outline-color: #fff !important;
   }
 
 }
@@ -748,7 +747,7 @@ ul.nav > li.dropdown > ul.dropdown-menu > li > a {
 }
 
 .btn-default .glyphicon {
-  color: #757575;
+  // color: #757575;
 }
 
 table {
@@ -759,22 +758,16 @@ table {
   margin-bottom: 0px !important;
 }
 
-html .table.table-striped > tbody > tr:nth-of-type(odd) > td {
+html .table.table-striped > tbody > tr:nth-of-type(odd) {
   // background-color: transparent;//#00ff00;// rgba(0,111,255,.4);
-  background-color: var(--bs-table-striped-bg-odd);// rgba(0,111,255,.4);
 }
 
-html .table.table-striped > tbody > tr:nth-of-type(even) > td {
+html .table.table-striped > tbody > tr:nth-of-type(even) {
   // background-color: transparent;// #ff0000;// rgba(0,111,255,.4);
-  background-color: var(--bs-table-striped-bg-even);// rgba(0,111,255,.4);
 }
 
-.table, .table tbody >tr >td {
-  border-color: var(--bs-table-border-color);
-}
-
-html .table .table {
-  background-color: transparent;
+.table {
+  // border-color: var(--bs-table-border-color);
 }
 
 .nav-tabs-justified, .nav-tabs.nav-justified {
@@ -784,7 +777,7 @@ html .table .table {
 }
 
 .table th, strong, b {
-  font-family: "Inter", serif;
+  // font-family: "Inter", serif;
   font-weight: 500;
 }
 
@@ -837,17 +830,17 @@ html .table .table {
       padding-left: 44px;
   }
 
-  &:before {
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 0;
-      height: 42px;
-      min-height: 100%;
-      content: "";
-      transition: opacity 0ms;
-      opacity: 0;
-  }
+  // &:before {
+  //     position: absolute;
+  //     top: 0px;
+  //     left: 0;
+  //     width: 0;
+  //     height: 42px;
+  //     min-height: 100%;
+  //     content: "";
+  //     transition: opacity 0ms;
+  //     opacity: 0;
+  // }
 
 }
 
@@ -870,11 +863,11 @@ html .table .table {
 }
 
 .active-menu a:before {
-  background: #242f35;
+  // background: #242f35;
 }
 
 .alert.alert-danger {
-  color: #fff !important;
+  // color: #fff !important;
 }
 
 .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
@@ -922,8 +915,8 @@ html .table .table {
 }
 
 ::-webkit-scrollbar-thumb {
-  border: thin solid #e5e5e5;
-  border-radius: 0px;
+  // border: thin solid #e5e5e5;
+  // border-radius: 0px;
   // background: #afafaf;
 }
 
@@ -973,7 +966,7 @@ label > input[type="radio"] {
 }
 
 input[type="checkbox"], input[type="radio"] {
-  font: inherit;
+  // font: inherit;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -984,11 +977,11 @@ input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
   transition: border-color 150ms ease, background-color 150ms ease;
   transform: translateY(1px);
-  color: #3f3f3f;
+  // color: #3f3f3f;
   border: 1px solid map-get($colors, primary);
 
   border-radius: 0.15em;
-  background-color: map-get($colors, background-tertiary);
+  // background-color: map-get($colors, background-tertiary);
   // background-color: #fff;
   -webkit-appearance: none;
   appearance: none;
@@ -1009,6 +1002,7 @@ input[type="checkbox"], input[type="radio"] {
 
   &:checked {
       border-color: #3498db;
+      color: var(--bs-primary);
       // background-color: #3498db;
 
       &::before {
@@ -1020,7 +1014,7 @@ input[type="checkbox"], input[type="radio"] {
   }
 
   &:hover {
-      border-color: #3498db;
+      // border-color: #3498db;
   }
 
   &:disabled {
@@ -1148,4 +1142,3 @@ table#tunable.bootgrid-table td {
 #filter-log-entries th[data-column-id="__timestamp__"] {
   min-width: 3.5em;
 }
-
