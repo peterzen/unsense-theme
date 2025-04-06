@@ -1,18 +1,98 @@
 /**
  * Bootstrap Variables
  */
- $colors: (
-  background-primary: rgba(0,111,255,.05),
-  background-secondary:rgb(40, 43, 47),
-  background-tertiary: rgba(0,111,255,.1),
-  default: rgb(71, 151, 255),
-  primary: rgba(0,111,255,.4),
+
+ $background-primary: rgb(0, 0, 0);
+ $background-secondary:rgb(40, 43, 47);
+ $background-tertiary: rgba(0,111,255,.1);
+ 
+
+// === Core color palette ===
+$gray-scale: (
+  base:    #000,
+  darker:  #1e1f23,
+  dark:    #2a2b30,
+  mid:     #3a3b41,
+  light:   #5c6370,
+  lighter: #888
+);
+
+$brand-colors: (
+  primary: #3794ff,
+  success: #00d084,
+  info:    #5bc0de,
+  warning: #f0ad4e,
+  danger:  #ff4d4f
+);
+
+// === Flattened aliases ===
+$gray-base:    map-get($gray-scale, base);
+$gray-darker:  map-get($gray-scale, darker);
+$gray-dark:    map-get($gray-scale, dark);
+$gray:         map-get($gray-scale, mid);
+$gray-light:   map-get($gray-scale, light);
+$gray-lighter: map-get($gray-scale, lighter);
+
+$brand-primary: map-get($brand-colors, primary);
+$brand-success: map-get($brand-colors, success);
+$brand-info:    map-get($brand-colors, info);
+$brand-warning: map-get($brand-colors, warning);
+$brand-danger:  map-get($brand-colors, danger);
+
+// === Derived UI tokens ===
+$body-bg:        $gray-darker;
+$text-color:     #d4d4d4;
+$link-color:     $brand-primary;
+$link-hover-color: #61aaff;
+
+$input-bg:        $gray-dark;
+$input-color:     $text-color;
+$input-border:    $gray;
+$input-border-focus: $brand-primary;
+$input-color-placeholder: $gray-lighter;
+
+$table-bg:    $background-primary;
+$table-bg-accent:    $background-primary;
+$table-bg-hover:     darken($background-primary, 10%);
+$table-border-color: lighten($background-primary, 2%);
+
+$btn-default-color:  $text-color;
+$btn-default-bg:     $gray-dark;
+$btn-default-border: $gray;
+
+$navbar-default-bg:               $gray-dark;
+$navbar-default-border:           $gray;
+$navbar-default-link-color:       $text-color;
+$navbar-default-link-hover-color: $link-hover-color;
+
+$panel-bg:                 $gray-dark;
+$panel-default-border:     $gray;
+$panel-default-text:       $text-color;
+$panel-default-heading-bg: $gray-dark;
+
+
+
+
+$colors: (
+  default:        #5c6370,
+  primary:        #3794ff,
+  success:        #00d084,
+  info:           #5bc0de,
+  warning:        #f0ad4e,
+  danger:         #ff4d4f,
+  light:          #2a2b30,
+  dark:           #1e1f23,
   navbg: #000000,
   lightgrey: #f7f7f7,
   lightergrey: #fbfbfb,
   darkgrey: #3c3c3b,
   bordergrey: #c0c0c0,
+  background-primary: $background-primary,
+  background-secondary:$background-secondary,
+  background-tertiary: $background-tertiary,
 );
+
+
 
 $input-border: #e4eaec;
 $list-group-active-border: #3498db;
@@ -25,70 +105,4 @@ $zindex: (
   sidebar: 3,
 );
 
-// $font-size-base: 13px;
-
-
-// :root {
-//   // Base Colors
-//   --bs-body-bg: #1e1f23;
-//   --bs-body-color: #d4d4d4;
-//   --bs-border-color: #3a3b41;
-
-//   // Theme Palette
-//   --bs-primary: #3794ff;
-//   --bs-secondary: #5c6370;
-//   --bs-success: #00d084;
-//   --bs-info: #5bc0de;
-//   --bs-warning: #f0ad4e;
-//   --bs-danger: #ff4d4f;
-//   --bs-light: #2a2b30;
-//   --bs-dark: #111216;
-
-//   // Links
-//   --bs-link-color: #3794ff;
-//   --bs-link-hover-color: #61aaff;
-
-//   // Buttons
-//   --bs-btn-color: #d4d4d4;
-//   --bs-btn-bg: #2a2b30;
-//   --bs-btn-border-color: #3a3b41;
-//   --bs-btn-hover-color: #d4d4d4;
-//   --bs-btn-hover-bg: #42464d;
-//   --bs-btn-hover-border-color: #4c4f58;
-
-//   // Forms
-//   --bs-input-bg: #2a2b30;
-//   --bs-input-color: #d4d4d4;
-//   --bs-input-border-color: #3a3b41;
-//   --bs-input-focus-bg: #2a2b30;
-//   --bs-input-focus-color: #d4d4d4;
-//   --bs-input-focus-border-color: #3794ff;
-//   --bs-input-placeholder-color: #888;
-
-//   // Tables
-//   --bs-table-bg: #2a2b30;
-//   --bs-table-striped-bg: #242529;
-//   --bs-table-hover-bg: #42464d;
-//   --bs-table-border-color: #3a3b41;
-//   --bs-table-color: #d4d4d4;
-
-//   // Alerts
-//   --bs-alert-bg: #2a2b30;
-//   --bs-alert-color: #d4d4d4;
-//   --bs-alert-border-color: #3a3b41;
-
-//   // Navs
-//   --bs-nav-link-color: #d4d4d4;
-//   --bs-nav-link-hover-color: #3794ff;
-//   --bs-nav-tabs-border-color: #3a3b41;
-//   --bs-nav-tabs-link-active-color: #3794ff;
-//   --bs-nav-tabs-link-active-bg: #2a2b30;
-
-//   // Pagination
-//   --bs-pagination-color: #d4d4d4;
-//   --bs-pagination-bg: #2a2b30;
-//   --bs-pagination-border-color: #3a3b41;
-//   --bs-pagination-hover-color: #d4d4d4;
-//   --bs-pagination-hover-bg: #42464d;
-//   --bs-pagination-hover-border-color: #4c4f58;
-// }
+$font-size-base: 13px;

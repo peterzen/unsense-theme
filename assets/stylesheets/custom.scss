@@ -1,3 +1,17 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+  height: 100%;
+  background-color: #000000;
+}
+
+body {
+  min-width: 320px;
+  touch-action: manipulation;
+}
+
 
 .page-head {
   position: fixed;
@@ -5,14 +19,14 @@
   top: 0;
   right: 0;
   left: 0;
-  // background: map-get($colors, background-secondary);
+  background: map-get($colors, background-secondary);
 
   .navbar-default {
       min-height: 60px;
       // color: rgba(87, 87, 87, 0.67);
       border: 0;
-      // background:map-get($colors, background-secondary);
-      box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+      background:map-get($colors, background-secondary);
+      // box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
   }
 
   .navbar-text {
@@ -120,7 +134,7 @@
   height: calc(100% - 60px) !important;
   margin-top: 60px;
   // border-right: 1px solid rgba(0, 0, 0, .15);
-  // background: map-get($colors, navbg);
+  background: map-get($colors, navbg);
 
   @extend .hidden-xs;
 }
@@ -146,13 +160,13 @@
   width: 100%;
   padding: 20px 0;
   // border-top: 1px solid rgba(#D9D9D9, .50);
-  // background: map-get($colors, background-tertiary);
+  background: map-get($colors, background-tertiary);
 }
 
 .content-box {
   // border: 1px solid map-get($colors, bordergrey);
   border-radius: 3px;
-  // background: map-get($colors, background-tertiary);
+  background: map-get($colors, background-tertiary);
 
   @extend .clearfix;
 

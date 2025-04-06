@@ -1,14 +1,15 @@
 
 :root {
-    --chart-js-background-color: #f7e2d6;
+    // --chart-js-background-color: #f7e2d6;
     --chart-js-border-color: #f6f6f6;
     --chart-js-font-color: #4b4b64;
 }
 
 .btn-pressed, .btn-pressed:hover {
-    color: white;
-    background-color: #0086d9;
+    // color: white;
+    // background-color: #0086d9;
 }
+
 
 
 #save-grid {
@@ -45,13 +46,13 @@
     text-align: center;
     border: none !important;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    background-color: #fff;
+    // background-color: #fff;
     box-shadow: 0 2px 4px rgba(40, 40, 50, 0.15), 0 0 1px rgba(40, 40, 50, 0.35);
 }
 
 .widget-error {
     margin: 50px;
-    color: #721c24
+    color: $brand-danger
 }
 
 .widget-content {
@@ -279,7 +280,7 @@ div {
 
 .flextable-row:hover {
     transition: 500ms;
-    background: #f5f5f5;
+    // background: #f5f5f5;
 }
 
 .flex-cell {
@@ -306,7 +307,7 @@ div {
 
 .column .flex-cell:hover {
     transition: 500ms;
-    background: #f5f5f5;
+    // background: #f5f5f5;
 }
 
 .flex-subcell {
@@ -331,13 +332,13 @@ div {
     transition: 0.5s;
     opacity: 0.4;
     border-top: 1px solid #eff3f8;
-    background-color: #d6e5f7; /* fade-in color, transitions to transparent */
+    // background-color: #d6e5f7; /* fade-in color, transitions to transparent */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .grid-row:hover {
     transition: 500ms;
-    background: #f5f5f5 !important;
+    // background: #f5f5f5 !important;
 }
 
 .grid-header {
