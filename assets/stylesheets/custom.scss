@@ -86,11 +86,15 @@ body {
   }
 }
 
+main.page-content {
+
+  padding-top: 60px;
+}
+
 .page-content {
   position: relative;
   z-index: map-get($zindex, main);
-  height: calc(100% - 60px);
-  padding-top: 60px;
+  // height: calc(100% - 60px);
 
   >.row {
     height: 100%;
@@ -1031,14 +1035,14 @@ select {
   }
 }
 
-button[type="file"] {
-  @extend .btn;
-  @extend .btn-primary;
+.control-label {
+  white-space: nowrap;
 }
 
 .table td {
   word-break: break-word;
 }
+
 .page-content-main  form input[type="checkbox"]{ 
   margin-bottom: 0.25em;
   margin-right: 0.25em;

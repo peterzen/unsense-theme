@@ -108,7 +108,8 @@ html .table th>a.sortable {
 
 // in multi-select dropdown menus move the selected items
 // to the top of the list
-.bootstrap-select select[multiple="multiple"]~.dropdown-menu {
+.bootstrap-select select[multiple="multiple"]~.dropdown-menu,
+.bootstrap-select .bs-searchbox ~ [aria-multiselectable="true"]  {
   .dropdown-menu.inner {
     display: flex;
     flex-direction: column;
@@ -120,6 +121,7 @@ html .table th>a.sortable {
     >li:has(a.selected) {
       order: -1;
       font-weight: 700;
+
       a.selected {
         margin-left: -1rem;
       }
@@ -151,9 +153,11 @@ html .tokenize {
       background-color: darken($brand-primary, 5%);
       border: none;
     }
+
     >.token-search {
       background-color: transparent;
       border: none;
+
       input {
         border: none;
       }
