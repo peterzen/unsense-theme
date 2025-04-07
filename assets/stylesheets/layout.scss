@@ -106,26 +106,11 @@ aside.page-side {
   // height: calc(100% - 60px) !important;
   // margin-top: 60px;
 
-  // @extend .hidden-xs;
+  @extend .hidden-xs;
 }
 
-#navigation {
-  // margin-top: 60px;
-}
 
 .page-content {
-  // flex: 1 1 auto;
-  // display: flex;
-  // overflow: hidden;
-  // min-height: 0;
-  // position: relative;
-  // z-index: map-get($zindex, main);
-  // height: calc(100% - 60px);
-
-  >.row {
-    // height: 100%;
-  }
-
   @media (min-width: $screen-sm-min) {
 
     &.col-lg-10,
@@ -143,7 +128,6 @@ aside.page-side {
 .page-content-head {
   padding-top: 20px;
   padding-bottom: 15px;
-  background: $body-bg;
 
   .navbar-nav {
     width: 100%;

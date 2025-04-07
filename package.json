@@ -4,9 +4,11 @@
   "scripts": {
     "build": "SASS_WARN_DEPRECATED=false sass assets/stylesheets/main.scss build/css/main.css --no-source-map",
     "watch": "SASS_WARN_DEPRECATED=false sass --watch assets/stylesheets/main.scss:build/css/main.css",
-    "clean": "rm -rf build/css/*"
+    "clean": "rm -rf build/css/*",
+    "dev": "browser-sync start --proxy 'https://10.100.0.1' --files 'build/css/main.css'"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "sass": "^1.75.0"
   },
   "dependencies": {

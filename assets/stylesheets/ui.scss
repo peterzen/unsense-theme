@@ -41,6 +41,7 @@ form>table.table {
   // heuristic to find form labels in tables
   >tbody tr td {
     border-top: none;
+
     &:has([class*="fa-info-circle"]) {
       white-space: nowrap;
     }
@@ -113,7 +114,7 @@ html .table th>a.sortable {
 // in multi-select dropdown menus move the selected items
 // to the top of the list
 .bootstrap-select select[multiple="multiple"]~.dropdown-menu,
-.bootstrap-select .bs-searchbox ~ [aria-multiselectable="true"]  {
+.bootstrap-select .bs-searchbox~[aria-multiselectable="true"] {
   .dropdown-menu.inner {
     display: flex;
     flex-direction: column;
@@ -187,4 +188,63 @@ input#mss {
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 1rem;
+}
+
+.command-toggle {
+
+  &.fa-check-square-o {
+    color: $gray-lighter;
+  }
+
+  &.fa-square-o {
+    color: $gray;
+  }
+
+  // background-color: $gray-dark;
+  // background: red;
+}
+
+
+
+html .bootgrid-table {
+
+  th:hover,
+  th:active {
+    background: $table-bg;
+  }
+}
+
+
+#menu_messages .navbar-text {
+  font-size: $font-size-small;
+  display: inline-block;
+  max-width: 10rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  mask-image: linear-gradient(to right, black 50%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 50%, transparent);
+  transition: max-width 0.8s ease;
+
+  &:hover {
+    mask-image: none;
+    -webkit-mask-image: none;
+    overflow: visible;
+    max-width: 40rem;
+  }
+
+}
+
+#menu_search_box {
+  transition: width 0.3s ease;
+
+}
+
+#mainmenu {
+  .list-group-item {
+    &.active-menu-title {
+      background-color: red;
+    }
+  }
 }

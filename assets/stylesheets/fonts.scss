@@ -27,16 +27,24 @@
 
 @import "open-sans/open-sans";
 
-html, body {
+html,
+body {
   font-family: "Open Sans", sans-serif;
   // font-weight: 400;
 }
 
-.table > colgroup + thead > tr > th {
-  font-family: "Open Sans", sans-serif !important;
+.table>colgroup+thead>tr {
+
+  th,
+  td {
+    font-family: "Open Sans", sans-serif !important;
+  }
 }
 
-.table thead tr th {
-  font-family: "Open Sans", sans-serif !important;
-}
+.table thead tr {
 
+  th,
+  td {
+    font-family: "Open Sans", sans-serif !important;
+  }
+}
