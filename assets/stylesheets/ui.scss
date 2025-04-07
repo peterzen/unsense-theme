@@ -38,8 +38,12 @@ form>table.table {
     }
   }
 
+  // heuristic to find form labels in tables
   >tbody tr td {
     border-top: none;
+    &:has([class*="fa-info-circle"]) {
+      white-space: nowrap;
+    }
   }
 
   >tbody>tr>td>strong {
@@ -176,4 +180,11 @@ html .tokenize {
 input#mtu,
 input#mss {
   width: 7rem;
+}
+
+.view-info {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 1rem;
 }

@@ -1,31 +1,25 @@
-
-
 * {
   -webkit-font-smoothing: antialiased;
 }
 
 html,
 body {
-  height: 100%;
   background-color: $body-bg;
 }
 
 body {
-  min-width: 320px;
   touch-action: manipulation;
 }
 
 
 .page-head {
-  position: fixed;
-  z-index: map-get($zindex, header);
-  top: 0;
-  right: 0;
-  left: 0;
+  // flex: 0 0 auto;
+  // height: 60px;
   background: $background-secondary;
+  // z-index: map-get($zindex, header); /
 
   .navbar-default {
-    min-height: 60px;
+    // min-height: 60px;
     // color: rgba(87, 87, 87, 0.67);
     border: 0;
     background: $background-secondary;
@@ -37,14 +31,14 @@ body {
   }
 
   .navbar-right {
-    margin-top: 6px;
+    // margin-top: 6px;
   }
 
   .navbar-brand {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     // width: 250px;
-    height: 100%;
+    // height: 100%;
     text-align: center;
     // color: #000;
     // background: #3498db;
@@ -68,90 +62,59 @@ body {
   }
 
   .navbar-toggle {
-    top: 5px;
+    // top: 5px;
     border: none;
 
-  //     .icon-bar {
-  //         background-color: map-get($colors, background-primary);
-  //     }
+    //     .icon-bar {
+    //         background-color: map-get($colors, background-primary);
+    //     }
 
-      &:hover, &:focus {
-          // background-color: #000000;
-          color: #000;
+    &:hover,
+    &:focus {
+      // background-color: #000000;
+      color: #000;
 
-          .icon-bar {
-              background-color: map-get($colors, background-tertiary);
-          }
+      .icon-bar {
+        background-color: map-get($colors, background-tertiary);
       }
-  }
-}
-
-main.page-content {
-
-  padding-top: 60px;
-}
-
-.page-content {
-  position: relative;
-  z-index: map-get($zindex, main);
-  // height: calc(100% - 60px);
-
-  >.row {
-    height: 100%;
-  }
-
-  @media (min-width: $screen-sm-min) {
-
-    &.col-lg-10,
-    &.col-sm-9 {
-      width: calc(100% - 200px);
-    }
-
-    &.col-lg-push-2,
-    &.col-sm-push-3 {
-      left: 200px;
     }
   }
 }
+
 
 .page-content-head {
-  padding-top: 20px;
-  padding-bottom: 15px;
+  // padding-top: 20px;
+  // padding-bottom: 15px;
   // border-bottom: 1px solid rgba(#D9D9D9, .50);
   background: $body-bg;
 
   .navbar-nav {
-    width: 100%;
+    // width: 100%;
   }
 
   h1,
   h2,
   h3 {
     line-height: 1;
-    margin: 0;
+    // margin: 0;
   }
 }
 
-.page-content-main {
-  min-height: calc(100% - 64px);
-  padding: 15px 0 (15px + 58px);
-  // background: #ff0000;
-}
 
 .page-side {
-  position: fixed;
-  z-index: map-get($zindex, sidebar);
-  top: 0;
-  left: 0;
-  overflow: auto;
-  width: 200px;
-  height: 100% !important;
-  height: calc(100% - 60px) !important;
-  margin-top: 60px;
+  // position: fixed;
+  // z-index: map-get($zindex, sidebar);
+  // top: 0;
+  // left: 0;
+  // overflow: auto;
+  // width: 200px;
+  // height: 100% !important;
+  // height: calc(100% - 60px) !important;
+  // margin-top: 60px;
   border-right: 1px solid darken($navbar-default-border, 5%);
   background: $navbar-default-bg;
 
-  @extend .hidden-xs;
+  // @extend .hidden-xs;
 }
 
 .page-side-nav {
@@ -802,7 +765,7 @@ ul.nav>li.dropdown>ul.dropdown-menu>li>a {
     // background: #fff;
   }
 
-  &.open > .btn-default {
+  &.open>.btn-default {
     // outline-color: #fff !important;
     border-color: $input-border;
   }
@@ -1043,7 +1006,7 @@ select {
   word-break: break-word;
 }
 
-.page-content-main  form input[type="checkbox"]{ 
+.page-content-main form input[type="checkbox"] {
   margin-bottom: 0.25em;
   margin-right: 0.25em;
 }
@@ -1055,19 +1018,22 @@ label>input[type="radio"] {
 }
 
 input[type="checkbox"],
-input[type="text"], 
-input[type="password"], 
-textarea{
+input[type="text"],
+input[type="password"],
+textarea {
   border-radius: 4px;
+
   &:hover {
     border-color: $input-border;
     background-color: lighten($input-bg, 5%);
   }
+
   &:focus {
     border-color: $input-border-focus;
     background-color: lighten($input-bg, 5%);
   }
 }
+
 input[type="checkbox"],
 input[type="radio"] {
   // font: inherit;
@@ -1228,15 +1194,6 @@ div[data-for*="help_for"] {
   touch-action: none;
 }
 
-// html .bootgrid-table {
-//   table-layout: auto !important;
-//   td {
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//     max-width: 0;
-//   }
-// }
 
 table#tunable.bootgrid-table td {
   white-space: normal !important;
