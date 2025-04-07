@@ -134,6 +134,7 @@ html .table th>a.sortable {
   }
 }
 
+#shaperChangeMessage,
 #change_message_base_form {
   display: inline-block;
   margin: 0;
@@ -146,6 +147,13 @@ html .table th>a.sortable {
     // margin: auto;
   }
 }
+
+#shaperChangeMessage {
+  position: absolute;
+  width: 50%;
+  padding-top: 1.25rem;
+}
+
 
 html .tokenize {
   >.tokens-container {
@@ -177,6 +185,9 @@ html .tokenize {
 
 }
 
+hr {
+  opacity: 0.25;
+}
 
 input#mtu,
 input#mss {
@@ -199,12 +210,7 @@ input#mss {
   &.fa-square-o {
     color: $gray;
   }
-
-  // background-color: $gray-dark;
-  // background: red;
 }
-
-
 
 html .bootgrid-table {
 
@@ -242,9 +248,11 @@ html .bootgrid-table {
 }
 
 #mainmenu {
+  .active-menu-title {
+    background-color: $background-secondary !important;
+  }
+
   .list-group-item {
-    &.active-menu-title {
-      background-color: red;
-    }
+    background-color: transparent;
   }
 }
