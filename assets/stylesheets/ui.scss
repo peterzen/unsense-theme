@@ -1,8 +1,59 @@
+
+
 .opnsense_standard_table_form {
   #save, #cancel {
     float: right;
   }
   #cancel {
-    margin-right: 8px;
+    margin-right: 1rem;
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+
+.table.opnsense_standard_table_form,
+form > .table-responsive > .table {
+  thead {
+    th {
+      @extend .h2;
+    }
+  }
+  tbody tr td {
+    border-top: none;
+  }
+
+  &.table-striped {
+    & > tbody > tr:nth-of-type(odd) td {
+      background-color: transparent;//#00ff00;// rgba(0,111,255,.4);
+    }
+    
+    & > tbody > tr:nth-of-type(even) td {
+      background-color: transparent;// #ff0000;// rgba(0,111,255,.4);
+    }
+  }
+}
+
+#allcfg + .content-box {
+  .opnsense_standard_table_form {
+    &, & td {
+      background-color: $body-bg;
+    }
+  }
+}
+
+html .table th > a.sortable {
+  color: $text-color;
+  text-decoration: none;
+  @extend .h3;
+  &:hover {
+    color: $link-hover-color;
+  }
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $link-hover-color;
   }
 }

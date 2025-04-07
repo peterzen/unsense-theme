@@ -1,0 +1,161 @@
+// Bootstrap 3.4.1 – Dark Theme Based on Unifi UI Colors
+// DRY SCSS structure with maps and derived variables
+
+
+
+
+// ===== Color Maps =====
+$gray-scale: (
+  base:    #000000,
+  darker:  #1e1f23,
+  dark:    #2a2b30,
+  mid:     #3a3b41,
+  light:   #5c6370,
+  lighter: #888888
+);
+
+$brand-colors: (
+  primary: #3794ff,
+  success: #00d084,
+  info:    #5bc0de,
+  warning: #f0ad4e,
+  danger:  #ff4d4f
+);
+
+// ===== Aliases =====
+$gray-base:    map-get($gray-scale, base);
+$gray-darker:  map-get($gray-scale, darker);
+$gray-dark:    map-get($gray-scale, dark);
+$gray:         map-get($gray-scale, mid);
+$gray-light:   map-get($gray-scale, light);
+$gray-lighter: map-get($gray-scale, lighter);
+
+$brand-primary: map-get($brand-colors, primary);
+$brand-success: map-get($brand-colors, success);
+$brand-info:    map-get($brand-colors, info);
+$brand-warning: map-get($brand-colors, warning);
+$brand-danger:  map-get($brand-colors, danger);
+
+// ===== Base =====
+$body-bg:        $gray-darker;
+$text-color:     #d4d4d4;
+$link-color:     $brand-primary;
+$link-hover-color: #61aaff;
+
+$background-primary: darken($body-bg, 5%);
+$background-secondary:darken($body-bg, 10%);
+$background-tertiary: lighten($body-bg, 5%);
+
+
+// ===== Typography =====
+$headings-color: $text-color;
+$text-muted:     $gray-light;
+
+// ===== Inputs =====
+$input-bg:                  $gray-dark;
+$input-color:               $text-color;
+$input-border:              $gray;
+$input-border-focus:        $brand-primary;
+$input-color-placeholder:   $gray-lighter;
+
+// ===== Buttons =====
+$btn-default-color:         $text-color;
+$btn-default-bg:            $gray-dark;
+$btn-default-border:        $gray;
+$btn-primary-color:         #ffffff;
+$btn-primary-bg:            $brand-primary;
+$btn-primary-border:        darken($brand-primary, 8%);
+
+// ===== Tables =====
+$table-bg:                  $gray-dark;
+$table-bg-accent:           darken($gray-dark, 1%);
+$table-bg-hover:            #42464d;
+$table-border-color:        $gray;
+$table-color:               $text-color;
+
+// ===== Navbars =====
+$navbar-default-bg:               $background-primary;
+$navbar-default-border:           $gray;
+$navbar-default-link-color:       $text-color;
+$navbar-default-link-hover-color: $brand-primary;
+$navbar-default-link-hover-bg:    transparent;
+$navbar-default-brand-color:      $text-color;
+$navbar-default-toggle-icon-bar-bg: $gray-light;
+
+// ===== Panels =====
+$panel-bg:                        $gray-dark;
+$panel-default-border:           $gray;
+$panel-default-text:             $text-color;
+$panel-default-heading-bg:       $gray-dark;
+
+// ===== Alerts =====
+$alert-success-bg:               rgba($brand-success, 0.1);
+$alert-success-text:             $brand-success;
+$alert-success-border:           rgba($brand-success, 0.25);
+
+$alert-info-bg:                  rgba($brand-info, 0.1);
+$alert-info-text:                $brand-info;
+$alert-info-border:              rgba($brand-info, 0.25);
+
+$alert-warning-bg:               rgba($brand-warning, 0.1);
+$alert-warning-text:             $brand-warning;
+$alert-warning-border:           rgba($brand-warning, 0.25);
+
+$alert-danger-bg:                rgba($brand-danger, 0.1);
+$alert-danger-text:              $brand-danger;
+$alert-danger-border:            rgba($brand-danger, 0.25);
+
+// ===== Forms =====
+$legend-color:                   $text-color;
+$input-group-addon-bg:          $gray;
+$input-group-addon-border-color:$gray;
+
+// ===== Dropdowns =====
+$dropdown-bg:                    $gray-dark;
+$dropdown-border:                $gray;
+$dropdown-link-color:           $text-color;
+$dropdown-link-hover-bg:        $gray;
+$dropdown-link-hover-color:     $brand-primary;
+
+// ===== Pagination =====
+$pagination-color:              $text-color;
+$pagination-bg:                 $gray-dark;
+$pagination-border:             $gray;
+$pagination-hover-bg:           $gray;
+$pagination-hover-color:        $text-color;
+$pagination-active-bg:          $brand-primary;
+$pagination-active-color:       #fff;
+$pagination-active-border:      darken($brand-primary, 8%);
+$pagination-disabled-bg:        $gray-dark;
+$pagination-disabled-color:     $gray-light;
+$pagination-disabled-border:    $gray;
+
+
+
+
+
+$colors: (
+  default: $gray-light,            // #5c6370
+  primary: $brand-primary,         // #3794ff
+  success: $brand-success,         // #00d084
+  info:    $brand-info,            // #5bc0de
+  warning: $brand-warning,         // #f0ad4e
+  danger:  $brand-danger,          // #ff4d4f
+  light:   $gray-dark,             // #2a2b30
+  dark:    $gray-darker   ,         // #1e1f23
+);
+
+
+
+// $input-border: #e4eaec;
+$list-group-active-border: #3498db;
+$theme-path: "/ui/themes/advanced";
+
+$zindex: (
+  header: 2,
+  footer: 2,
+  main: 1,
+  sidebar: 3,
+);
+
+$font-size-base: 13px;
