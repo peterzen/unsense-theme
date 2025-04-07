@@ -37,14 +37,14 @@ $brand-warning: map-get($brand-colors, warning);
 $brand-danger:  map-get($brand-colors, danger);
 
 // ===== Base =====
-$body-bg:        $gray-darker;
+$body-bg:        rgb(19, 20, 22);
 $text-color:     #d4d4d4;
 $link-color:     $brand-primary;
 $link-hover-color: #61aaff;
 
-$background-primary: darken($body-bg, 5%);
-$background-secondary:darken($body-bg, 10%);
-$background-tertiary: lighten($body-bg, 5%);
+$background-primary: darken($body-bg, 2%);
+$background-secondary:darken($body-bg, 5%);
+$background-tertiary: lighten($body-bg, 2%);
 
 
 // ===== Typography =====
@@ -52,9 +52,9 @@ $headings-color: $text-color;
 $text-muted:     $gray-light;
 
 // ===== Inputs =====
-$input-bg:                  $gray-dark;
+$input-bg:                  darken($gray-darker, 0%);
 $input-color:               $text-color;
-$input-border:              $gray;
+$input-border:              darken($gray-darker, 0%);
 $input-border-focus:        $brand-primary;
 $input-color-placeholder:   $gray-lighter;
 
@@ -67,14 +67,14 @@ $btn-primary-bg:            $brand-primary;
 $btn-primary-border:        darken($brand-primary, 8%);
 
 // ===== Tables =====
-$table-bg:                  $gray-dark;
-$table-bg-accent:           darken($gray-dark, 1%);
+$table-bg:                  transparent;
+$table-bg-accent:           $background-tertiary;
 $table-bg-hover:            #42464d;
-$table-border-color:        $gray;
+$table-border-color:        darken($gray-dark, 5%);
 $table-color:               $text-color;
 
 // ===== Navbars =====
-$navbar-default-bg:               $background-primary;
+$navbar-default-bg:               $body-bg;
 $navbar-default-border:           $gray;
 $navbar-default-link-color:       $text-color;
 $navbar-default-link-hover-color: $brand-primary;
@@ -131,7 +131,44 @@ $pagination-disabled-color:     $gray-light;
 $pagination-disabled-border:    $gray;
 
 
+// modals
+$modal-content-bg:         darken($gray-dark, 3%);
+$modal-content-border:     $gray;
+$modal-header-border-color: $gray;
+$modal-footer-border-color: $gray;
 
+$modal-title-color:        $text-color;
+$modal-body-color:         $text-color;
+
+$modal-backdrop-bg:        $gray-darker;
+$modal-backdrop-opacity:   0.75;
+
+$modal-header-color:       $text-color;
+$modal-footer-color:       $text-color;
+
+
+// alerts
+// === Alert component theme variables ===
+
+// $alert-bg-base:        $gray-dark;
+// $alert-border-base:    $gray;
+// $alert-text-base:      $text-color;
+
+// $alert-success-bg:     rgba($brand-success, 0.1);
+// $alert-success-border: rgba($brand-success, 0.25);
+// $alert-success-text:   $brand-success;
+
+// $alert-info-bg:        rgba($brand-info, 0.1);
+// $alert-info-border:    rgba($brand-info, 0.25);
+// $alert-info-text:      $brand-info;
+
+// $alert-warning-bg:     rgba($brand-warning, 0.1);
+// $alert-warning-border: rgba($brand-warning, 0.25);
+// $alert-warning-text:   $brand-warning;
+
+// $alert-danger-bg:      rgba($brand-danger, 0.1);
+// $alert-danger-border:  rgba($brand-danger, 0.25);
+// $alert-danger-text:    $brand-danger;
 
 
 $colors: (
@@ -146,6 +183,17 @@ $colors: (
 );
 
 
+$font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-base:       $font-family-sans-serif;
+$headings-font-family: "Open SansLight", Helvetica, Arial, sans-serif;
+$table-font-family: $font-family-base !default;
+
+$font-size-base:         14px;
+$font-size-large:        ceil($font-size-base * 1.25); // 17.5px
+$font-size-small:        ceil($font-size-base * 0.85); // ~12px
+
+$line-height-base:       1.428571429; // 20/14
+$line-height-computed:   floor($font-size-base * $line-height-base);
 
 // $input-border: #e4eaec;
 $list-group-active-border: #3498db;

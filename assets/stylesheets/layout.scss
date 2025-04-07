@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .table.bootgrid-table {
+    display: block;
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $gray-dark;
+      margin-bottom: 0.5em;
+
+      &:nth-child(odd) td {
+        background-color: lighten($body-bg, 1%) !important;
+      }
+    }
+
+    td {
+      flex: 1 0 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      white-space: normal;
+      padding: 4px 8px;
+      border: none !important;
+    }
+  }
+}

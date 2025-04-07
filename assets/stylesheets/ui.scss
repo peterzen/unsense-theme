@@ -1,59 +1,175 @@
-
-
 .opnsense_standard_table_form {
-  #save, #cancel {
+
+  #save,
+  #cancel,
+  input[value="Save"],
+  input[value="Cancel"] {
     float: right;
   }
-  #cancel {
+
+  #cancel,
+  input[value="Cancel"] {
     margin-right: 1rem;
     background: transparent;
     border-color: transparent;
   }
 }
 
+.modal-footer {
+  button[data-dismiss="modal"] {
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+#reconfigureAct {
+  float: right;
+  clear: both;
+  display: block;
+  margin-bottom: 1em;
+}
 
 .table.opnsense_standard_table_form,
-form > .table-responsive > .table {
-  thead {
+form>.table-responsive>.table,
+form>table.table {
+  >thead {
     th {
       @extend .h2;
     }
   }
-  tbody tr td {
+
+  >tbody tr td {
     border-top: none;
   }
 
+  >tbody>tr>td>strong {
+    @extend .h2;
+  }
+
   &.table-striped {
-    & > tbody > tr:nth-of-type(odd) td {
-      background-color: transparent;//#00ff00;// rgba(0,111,255,.4);
+    &>tbody>tr:nth-of-type(odd) td {
+      background-color: transparent; //#00ff00;// rgba(0,111,255,.4);
     }
-    
-    & > tbody > tr:nth-of-type(even) td {
-      background-color: transparent;// #ff0000;// rgba(0,111,255,.4);
+
+    &>tbody>tr:nth-of-type(even) td {
+      background-color: transparent; // #ff0000;// rgba(0,111,255,.4);
     }
   }
+
+  .table {
+    background-color: transparent;
+  }
+
+  table {
+    color: $table-color;
+  }
+
+
 }
 
-#allcfg + .content-box {
+#allcfg+.content-box {
   .opnsense_standard_table_form {
-    &, & td {
-      background-color: $body-bg;
+
+    &,
+    & td {
+      background-color: transparent;
     }
   }
 }
 
-html .table th > a.sortable {
+html .table th>a.sortable {
   color: $text-color;
   text-decoration: none;
   @extend .h3;
+
   &:hover {
     color: $link-hover-color;
   }
+
   &:focus {
     color: $link-hover-color;
     text-decoration: underline;
   }
+
   &:active {
     color: $link-hover-color;
   }
+}
+
+#update_status_container {
+  textarea {
+    background-color: $background-secondary;
+  }
+}
+
+.dropdown-menu .divider {
+  background-color: $gray;
+}
+
+// in multi-select dropdown menus move the selected items
+// to the top of the list
+.bootstrap-select select[multiple="multiple"]~.dropdown-menu {
+  .dropdown-menu.inner {
+    display: flex;
+    flex-direction: column;
+
+    >li {
+      order: 1;
+    }
+
+    >li:has(a.selected) {
+      order: -1;
+      font-weight: 700;
+      a.selected {
+        margin-left: -1rem;
+      }
+    }
+  }
+}
+
+#change_message_base_form {
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: $brand-primary;
+
+  &+button {
+    // margin: auto;
+  }
+}
+
+html .tokenize {
+  >.tokens-container {
+    // margin-top: 0px;
+    margin-bottom: 0.5rem;
+    background-color: $input-bg;
+    border-color: $input-border;
+
+    >.token {
+      background-color: darken($brand-primary, 5%);
+      border: none;
+    }
+    >.token-search {
+      background-color: transparent;
+      border: none;
+      input {
+        border: none;
+      }
+    }
+  }
+
+  &.focus.form-control {
+    outline: none !important;
+    box-shadow: none;
+    border-color: $input-border-focus;
+  }
+
+}
+
+
+input#mtu,
+input#mss {
+  width: 7rem;
 }
