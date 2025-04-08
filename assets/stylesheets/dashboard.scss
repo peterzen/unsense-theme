@@ -1,8 +1,8 @@
 
 :root {
     // --chart-js-background-color: #f7e2d6;
-    --chart-js-border-color: #f6f6f6;
-    --chart-js-font-color: #4b4b64;
+    --chart-js-border-color: $navbar-default-border;
+    --chart-js-font-color: $text-color;
 }
 
 .btn-pressed, .btn-pressed:hover {

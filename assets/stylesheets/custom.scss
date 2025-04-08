@@ -131,15 +131,15 @@ body {
 }
 
 .page-foot {
-  font-size: 0.8em;
-  // position: absolute;
-  // right: 0;
-  // z-index: map-get($zindex, footer);
-  // bottom: 0;
-  // width: 100%;
-  padding: 1rem 0;
-  // border-top: 1px solid rgba(#D9D9D9, .50);
+  position: fixed;
+  right: 0;
+  bottom: 0;
   background: $background-tertiary;
+}
+
+.page-foot, .login-foot  {
+  font-size: 0.8em;
+  padding: 1rem 0;
   a {
     color: darken($text-color, 25%);
   }
@@ -243,7 +243,12 @@ div.content-box.wizard {
 }
 
 .login-foot {
-  font-size: 12px;
+  // font-size: 12px;
+}
+
+.login-modal-container {
+  background-color: $background-secondary;
+  padding: 2em 1em;
 }
 
 .login-modal {
@@ -267,7 +272,7 @@ div.content-box.wizard {
     // background: map-get($colors, primary);
 
     img {
-      display: none;
+      // display: none;
     }
 
     .navbar-brand {
@@ -277,22 +282,6 @@ div.content-box.wizard {
       flex-direction: column;
       justify-content: center;
       text-align: center;
-
-      &::before {
-        font-size: 16px;
-        font-weight: 500;
-        display: inline-block;
-        content: "OPNSense";
-        // color: #fff;
-      }
-
-      &::after {
-        font-size: 11px;
-        font-weight: 400;
-        display: inline-block;
-        content: "AdvancedOPN Theme";
-        // color: #fafafa;
-      }
     }
   }
 
@@ -304,6 +293,11 @@ div.content-box.wizard {
     height: 60px;
     padding: 20px 20px 0 20px;
     border-top: 1px solid $background-tertiary ;
+
+    button {
+      float: none;
+      padding: 1em 3em;
+    }
 
     a {
       text-decoration: none;

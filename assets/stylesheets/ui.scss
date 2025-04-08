@@ -39,11 +39,24 @@ td:has(.btn-primary):has(.btn-default) {
   }
 }
 
+
+#reconfigureAct {
+  float: right;
+  clear: both;
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 1em;
+
+  & + .btn {
+    @include btn-cancel;
+  }
+}
+
 button#flushAct {
   @include btn-cancel;
 }
 
-.bootstrap-dialog-footer-buttons button {
+.bootstrap-dialog-footer-buttons button:not(.btn-default) {
   float: right;
   margin-left: 1rem;
 }
@@ -55,12 +68,6 @@ button#flushAct {
   }
 }
 
-#reconfigureAct {
-  float: right;
-  clear: both;
-  display: block;
-  margin-bottom: 1em;
-}
 
 .table.opnsense_standard_table_form,
 form>.table-responsive>.table,
