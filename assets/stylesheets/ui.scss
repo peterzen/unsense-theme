@@ -39,6 +39,14 @@ td:has(.btn-primary):has(.btn-default) {
   }
 }
 
+button#flushAct {
+  @include btn-cancel;
+}
+
+.bootstrap-dialog-footer-buttons button {
+  float: right  ;
+  margin-left: 1rem;
+}
 
 .modal-footer {
   button[data-dismiss="modal"] {
@@ -59,6 +67,7 @@ form>.table-responsive>.table,
 form>table.table {
   >thead {
     th {
+      font-weight: bold;
       @extend .h2;
     }
   }
@@ -72,8 +81,9 @@ form>table.table {
     }
   }
 
-  >tbody>tr>td>strong {
-    @extend .h2;
+ >tbody>tr>td>strong {
+    // @extend .h2;
+    font-weight: bold;
   }
 
   &.table-striped {
@@ -219,12 +229,12 @@ input#mss {
   width: 7rem;
 }
 
-.view-info {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  max-width: 1rem;
-}
+// .view-info {
+//   white-space: nowrap;
+//   text-overflow: ellipsis;
+//   overflow: hidden;
+//   max-width: 4rem;
+// }
 
 .command-toggle {
 

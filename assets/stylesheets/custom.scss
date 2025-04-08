@@ -131,14 +131,18 @@ body {
 }
 
 .page-foot {
-  font-size: $font-size-small;
-  position: fixed;
+  font-size: 0.8em;
+  position: absolute;
+  right: 0;
   z-index: map-get($zindex, footer);
   bottom: 0;
-  width: 100%;
+  // width: 100%;
   padding: 1rem 0;
   // border-top: 1px solid rgba(#D9D9D9, .50);
   background: $background-tertiary;
+  a {
+    color: darken($text-color, 25%);
+  }
 }
 
 .content-box {
