@@ -39,6 +39,8 @@ $brand-danger:  map-get($brand-colors, danger);
 // ===== Base =====
 $body-bg:        rgb(19, 20, 22);
 $text-color:     #d4d4d4;
+$text-color-accent: #ffffff;
+$text-color-muted: $gray-lighter;
 $link-color:     $brand-primary;
 $link-hover-color: #61aaff;
 
