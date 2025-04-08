@@ -447,6 +447,7 @@ main.page-content.col-lg-12 {
   width: 70px;
   border: none !important;
   background-color: transparent !important;
+  position: absolute;
 
   >div {
     &.row {
@@ -1064,12 +1065,12 @@ div[data-for*="help_for"] {
 }
 
 .bootgrid-table td.select-cell {
-  overflow: visible;
+  // overflow: visible;
   width: 30px !important;
 }
 
 .act_toggle {
-  font-size: 15px;
+  // font-size: 15px;
 }
 
 .fa.command-toggle {
@@ -1080,7 +1081,7 @@ div[data-for*="help_for"] {
 
 .form-control {
   &:hover {
-    border-color: #d1e5f2;
+    // border-color: #d1e5f2;
   }
 }
 
@@ -1106,7 +1107,7 @@ div[data-for*="help_for"] {
 
 
 table#tunable.bootgrid-table td {
-  white-space: normal !important;
+  // white-space: normal !important;
 }
 
 @media (min-width: $screen-lg-desktop) {
