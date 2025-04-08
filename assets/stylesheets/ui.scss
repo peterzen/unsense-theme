@@ -1,3 +1,19 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+
+@mixin btn-cancel {
+  margin-right: 1rem;
+  background: transparent;
+  border-color: transparent;
+}
+
 .opnsense_standard_table_form {
 
   #save,
@@ -9,11 +25,20 @@
 
   #cancel,
   input[value="Cancel"] {
-    margin-right: 1rem;
-    background: transparent;
-    border-color: transparent;
+    @include btn-cancel;
   }
 }
+
+td:has(.btn-primary):has(.btn-default) {
+  button {
+    float: right
+  }
+
+  .btn-default {
+    @include btn-cancel;
+  }
+}
+
 
 .modal-footer {
   button[data-dismiss="modal"] {
@@ -250,9 +275,47 @@ html .bootgrid-table {
 #mainmenu {
   .active-menu-title {
     background-color: $background-secondary !important;
+
+    & + .active-menu {
+      background-color: lighten($background-secondary, 10%) !important;
+    }
   }
 
   .list-group-item {
     background-color: transparent;
+  }
+}
+
+.nav {
+  &.nav-tabs {
+    background-color: $background-tertiary;
+    width: auto;
+    display: inline-block;
+    @include border-radius(5px);
+    border: none;
+    padding: 0.5rem;
+
+    >li {
+      >a {
+        border-bottom: none;
+        @include border-radius(5px);
+        color: $text-color;
+
+        &:hover {
+          border-bottom: none;
+          color: $brand-primary;
+          background-color: inherit;
+          // background-color: red;
+        }
+      }
+
+      &.active a {
+        color: $brand-primary;
+        &:hover {
+          background-color: $nav-tabs-active-link-hover-bg;
+          border-bottom: 1px solid transparent;
+        }
+      }
+    }
   }
 }

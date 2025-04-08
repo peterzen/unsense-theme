@@ -82,6 +82,26 @@ $navbar-default-link-hover-bg:    transparent;
 $navbar-default-brand-color:      $text-color;
 $navbar-default-toggle-icon-bar-bg: $gray-light;
 
+//== Tabs
+$nav-tabs-border-color:          $gray-light;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-active-link-hover-bg:  $gray-dark;
+$nav-tabs-active-link-hover-color: $brand-primary;
+$nav-tabs-active-link-hover-border-color: transparent;
+$nav-tabs-justified-link-border-color: transparent;
+$nav-tabs-justified-active-link-border-color: transparent;
+
+$nav-link-padding:                          10px 15px;
+$nav-link-hover-bg:                         $gray-light;
+
+$nav-disabled-link-color:                   $gray-light !default;
+$nav-disabled-link-hover-color:             $gray-light !default;
+
+// $nav-open-link-hover-color:                 #fff !default;
+
+
+
+
 // ===== Panels =====
 $panel-bg:                        $gray-dark;
 $panel-default-border:           $gray;

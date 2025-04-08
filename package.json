@@ -8,10 +8,10 @@
     "dev": "browser-sync start --proxy 'https://10.100.0.1' --files 'build/css/main.css'"
   },
   "devDependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#v3.4.1",
     "browser-sync": "^3.0.4",
-    "sass": "^1.75.0"
+    "sass": "^1.75.0",
+    "sass-formatter": "^0.7.9"
   },
-  "dependencies": {
-    "bootstrap": "^5.3.5"
-  }
+  "dependencies": {}
 }
