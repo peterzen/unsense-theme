@@ -137,9 +137,11 @@ body {
   background: $background-tertiary;
 }
 
-.page-foot, .login-foot  {
+.page-foot,
+.login-foot {
   font-size: 0.8em;
   padding: 1rem 0;
+
   a {
     color: darken($text-color, 25%);
   }
@@ -394,7 +396,7 @@ main.page-content.col-lg-12 {
 
   .panel.list-group>div {
     .list-group-item {
-      font-size: 13px;
+      font-size: $font-size-small;
       position: relative;
       padding: 5px 0 5px 35px;
 
@@ -408,7 +410,7 @@ main.page-content.col-lg-12 {
         width: 0;
         content: "";
         opacity: .8;
-        border-left: 1px dotted #3e474e !important;
+        // border-left: 1px dotted blue;//$gray-dark !important;
       }
 
       &::after {
@@ -419,7 +421,8 @@ main.page-content.col-lg-12 {
         display: block;
         width: 12px;
         content: "";
-        border-bottom: 1px dotted #3e474e !important;
+        // border-bottom: 1px dotted red;//$gray-dark !important;
+        // border-right: 1px dotted red;//$gray-dark !important;
       }
 
       &:hover,
@@ -427,7 +430,7 @@ main.page-content.col-lg-12 {
       &:focus {
         &::before {
           opacity: 1;
-          background-color: $background-tertiary;
+          // background-color: yellow;//$gray;
         }
       }
 
@@ -439,8 +442,12 @@ main.page-content.col-lg-12 {
 #navigation.col-sidebar-left {
   overflow: hidden;
   width: 70px;
-  border: none !important;
-  background-color: transparent !important;
+  height: 100%;
+  // border: none !important;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  background-color: transparent;
   position: absolute;
 
   >div {
@@ -450,7 +457,8 @@ main.page-content.col-lg-12 {
       >nav.page-side-nav {
         width: 70px;
         height: 100% !important;
-        border-right: 1px solid lighten($navbar-default-bg, 5%);
+        // box-sizing: border-box;
+        // border-right: 1px solid lighten($navbar-default-bg, 5%);
         background: $navbar-default-bg;
       }
     }
@@ -586,7 +594,7 @@ button.toggle-sidebar {
   font-size: 14px;
   float: left;
   margin-top: 20px;
-  color: #575757;
+  color: $gray-lighter;
   border: none;
   outline: none;
   background-color: transparent;
@@ -659,6 +667,21 @@ ul.nav>li.dropdown>ul.dropdown-menu>li>a {
 }
 
 // Tweak bootstrap select
+
+// keep bootstrap-select from pushing out form layout
+.table-responsive .bootstrap-select {
+  &[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .dropdown-toggle {
+    width: 100% !important;
+  }
+}
+
 .bootstrap-select {
 
   .btn-default {

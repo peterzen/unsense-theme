@@ -47,7 +47,7 @@ td:has(.btn-primary):has(.btn-default) {
   margin-bottom: 1em;
   margin-left: 1em;
 
-  & + .btn {
+  &+.btn {
     @include btn-cancel;
   }
 }
@@ -68,7 +68,17 @@ button#flushAct {
   }
 }
 
+// .page-content-main .content-box form> .table {
+//   &.table-striped {
+//     &>tbody>tr:nth-of-type(odd) td {
+//       // background-color: $gray-dark !important;//$gray-lighter; //#00ff00;// rgba(0,111,255,.4);
+//     }
 
+//     &>tbody>tr:nth-of-type(even) td {
+//       // background-color: yellowgreen;//; // #ff0000;// rgba(0,111,255,.4);
+//     }
+//   }
+// }
 .table.opnsense_standard_table_form,
 form>.table-responsive>.table,
 form>table.table {
@@ -95,19 +105,16 @@ form>table.table {
 
   &.table-striped {
     &>tbody>tr:nth-of-type(odd) td {
-      background-color: transparent; //#00ff00;// rgba(0,111,255,.4);
+      // background-color: $gray-darker;//$gray-lighter; //#00ff00;// rgba(0,111,255,.4);
     }
 
     &>tbody>tr:nth-of-type(even) td {
-      background-color: transparent; // #ff0000;// rgba(0,111,255,.4);
+      // background-color: yellowgreen;//; // #ff0000;// rgba(0,111,255,.4);
     }
   }
 
-  .table {
+  table, .table {
     background-color: transparent;
-  }
-
-  table {
     color: $table-color;
   }
 
@@ -116,7 +123,6 @@ form>table.table {
 
 #allcfg+.content-box {
   .opnsense_standard_table_form {
-
     &,
     & td {
       background-color: transparent;
@@ -151,56 +157,6 @@ html .table th>a.sortable {
 
 .dropdown-menu .divider {
   background-color: $gray;
-}
-
-// in multi-select dropdown menus move the selected items
-// to the top of the list
-.bootstrap-select select[multiple="multiple"]~.dropdown-menu,
-.bootstrap-select .bs-searchbox~[aria-multiselectable="true"] {
-  .dropdown-menu.inner {
-    display: flex;
-    flex-direction: column;
-
-    >li {
-      order: 1;
-    }
-
-    >li:has(a.selected) {
-      order: -1;
-      font-weight: 700;
-
-      a.selected {
-        margin-left: -1rem;
-      }
-    }
-  }
-}
-
-#shaperChangeMessage,
-#routeChangeMessage,
-#change_message_base_form {
-  display: inline-block;
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background: none;
-  color: $brand-primary;
-
-  &+button {
-    // margin: auto;
-  }
-}
-
-#shaperChangeMessage {
-  position: absolute;
-  width: 50%;
-  padding-top: 1.25rem;
-}
-
-#routeChangeMessage {
-  position: absolute;
-  width: 50%;
-  margin-top: 5em;
 }
 
 
@@ -347,7 +303,7 @@ html .bootgrid-table {
 
 
 table#tunable.bootgrid-table {
-  table-layout: fixed;
+  table-layout: auto;
   width: 100%;
 
   thead th a {
@@ -410,13 +366,84 @@ table#tunable.bootgrid-table {
 
 .panel-default {
   .panel-footer {
-      background-color: lighten($panel-bg, 5%);
-      border-top: none;
+    background-color: lighten($panel-bg, 5%);
+    border-top: none;
   }
 }
 
 
 
-#srcbeginport, #srcendport {
+#srcbeginport,
+#srcendport {
   width: 12em;
 }
+
+/*
+// firewall rules page
+// move Apply button and message to the bottom to make it 
+// consistent with the other forms
+
+.row:has(#fw-alert-box) {
+  display: flex;
+  flex-direction: column;
+
+  #fw-alert-box {
+    order: 1;
+  }
+
+  >section {
+    order: 0;
+  }
+}
+*/
+
+a:has(i#show_all_help_formDialogdialog_dialogSubnet4),
+a:has(i#show_advanced_formDialogdialog_dialogSubnet4) {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(0, 140, 0, .4);
+  width: 100%;
+
+  i {
+    flex: 0 0 auto;
+    font-size: 2em;
+    color: $gray;
+
+    &.fa-toggle-on {
+      color: $brand-primary;
+    }
+
+    &.fa-toggle-off {
+      color: $gray;
+    }
+  }
+
+  small {
+    background-color: red;
+
+  }
+}
+
+// fix position of 'select all' checkbox in bootgrid tables
+.bootgrid-table th.select-cell .select-box {
+  margin-bottom: 0.75em;
+}
+
+// firewall rules table
+table.table.opnsense-rules, table.table.table-striped {
+  // background: $table-bg;
+
+  >tbody {
+    >tr:nth-of-type(even) {
+
+      &,
+      td {
+        background-color: darken($background-tertiary, 1%);
+      }
+    }
+    >tr:hover td {
+      background-color: lighten($table-bg, 35%);
+    }
+  }
+}
+
