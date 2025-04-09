@@ -105,10 +105,10 @@ $nav-disabled-link-hover-color:             $gray-light !default;
 
 
 // ===== Panels =====
-$panel-bg:                        $gray-dark;
+$panel-bg:                       $background-primary;
 $panel-default-border:           $gray;
 $panel-default-text:             $text-color;
-$panel-default-heading-bg:       $gray-dark;
+$panel-default-heading-bg:       lighten($panel-bg, 5%);
 
 // ===== Alerts =====
 $alert-success-bg:               rgba($brand-success, 0.1);

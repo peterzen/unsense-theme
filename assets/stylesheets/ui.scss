@@ -177,6 +177,7 @@ html .table th>a.sortable {
 }
 
 #shaperChangeMessage,
+#routeChangeMessage,
 #change_message_base_form {
   display: inline-block;
   margin: 0;
@@ -194,6 +195,12 @@ html .table th>a.sortable {
   position: absolute;
   width: 50%;
   padding-top: 1.25rem;
+}
+
+#routeChangeMessage {
+  position: absolute;
+  width: 50%;
+  margin-top: 5em;
 }
 
 
@@ -397,4 +404,19 @@ table#tunable.bootgrid-table {
       }
     }
   }
+}
+
+
+
+.panel-default {
+  .panel-footer {
+      background-color: lighten($panel-bg, 5%);
+      border-top: none;
+  }
+}
+
+
+
+#srcbeginport, #srcendport {
+  width: 12em;
 }

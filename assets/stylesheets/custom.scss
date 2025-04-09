@@ -718,12 +718,15 @@ html .table.table-striped>tbody>tr:nth-of-type(even) {
 .table th,
 strong,
 b {
-  // font-family: "Inter", serif;
-  font-weight: 500;
+  font-weight: bold;
+}
+
+.table th {
+  color: $text-color-accent;
 }
 
 .table>tbody>tr>td:last-child {
-  padding-right: 15px;
+  padding-right: 1em;
 }
 
 /* helpers */
