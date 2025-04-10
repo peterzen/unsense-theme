@@ -207,7 +207,7 @@ $colors: (
 
 $font-family-sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 $font-family-base:       $font-family-sans-serif;
-$headings-font-family: "Open SansLight", Helvetica, Arial, sans-serif;
+$headings-font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 $table-font-family: $font-family-base !default;
 
 $font-size-base:         14px;
@@ -222,17 +222,11 @@ $list-group-bg:                 transparent;
 $list-group-border:             $gray-dark;
 $list-group-hover-bg:           $gray-light;
 $list-group-active-color:       $text-color-accent;
-$list-group-active-border: #3498db;
+$list-group-active-border:    #3498db;
 $list-group-active-bg:          $background-tertiary;
 $list-group-active-text-color:  lighten($list-group-active-bg, 40%);
 
 $theme-path: "/ui/themes/advanced";
 
-$zindex: (
-  header: 2,
-  footer: 2,
-  main: 1,
-  sidebar: 3,
-);
 
 $font-size-base: 15px;
