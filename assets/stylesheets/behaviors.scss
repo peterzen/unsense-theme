@@ -27,11 +27,14 @@
 
 // pin the change message boxes next to the apply button
 // to stop the button from moving around as the user is trying to click it
-
-#shaperChangeMessage,
-#routeChangeMessage,
-#change_message_base_form {
+div:has(.alert[id*=ChangeMessage]),
+// #shaperChangeMessage,
+// #routeChangeMessage,
+div:has(#change_message_base_form ){
+  .alert {
   display: inline-block;
+  position: absolute;
+  top: 1em;
   margin: 0;
   border: 0;
   padding: 0;
@@ -41,6 +44,7 @@
   &+button {
     // margin: auto;
   }
+}
 }
 
 #shaperChangeMessage {

@@ -95,8 +95,12 @@ body {
   h1,
   h2,
   h3 {
-    line-height: 1;
+    // line-height: 1;
     // margin: 0;
+  }
+
+  h1 {
+    // font-family: "OpenSans Light";
   }
 }
 
@@ -336,6 +340,7 @@ div.content-box.wizard {
 .list-group-item {
   border-right: none;
   border-left: none;
+  // background-color: transparent;
 
   &.collapsed .caret {
     border-top: 0;
@@ -377,7 +382,9 @@ main.page-content.col-lg-12 {
       }
 
       &.active {
-        color: #e1e4e6;
+        color: $text-color-accent;
+        background-color: $background-secondary;
+        // font-weight: bold;
         // background: rgba(#fff, 0.02);
       }
 
@@ -668,7 +675,7 @@ ul.nav>li.dropdown>ul.dropdown-menu>li>a {
 
 // Tweak bootstrap select
 
-// keep bootstrap-select from pushing out form layout
+// prevent bootstrap-select from pushing out form layout
 .table-responsive .bootstrap-select {
   &[style] {
     width: 100% !important;
@@ -716,6 +723,9 @@ ul.nav>li.dropdown>ul.dropdown-menu>li>a {
   // color: #757575;
 }
 
+.btn > b {
+  font-weight: normal;
+}
 
 .table,
 table {
@@ -748,8 +758,10 @@ b {
   color: $text-color-accent;
 }
 
+$spacing_unit: 1em;
+
 .table>tbody>tr>td:last-child {
-  padding-right: 1em;
+  padding-right: $spacing_unit;
 }
 
 /* helpers */
@@ -762,23 +774,23 @@ b {
 }
 
 .__mb {
-  margin-bottom: 15px;
+  margin-bottom: $spacing_unit;
 }
 
 .__mt {
-  margin-top: 15px;
+  margin-top: $spacing_unit;
 }
 
 .__ml {
-  margin-left: 15px;
+  margin-left: $spacing_unit;
 }
 
 .__mr {
-  margin-right: 15px;
+  margin-right: $spacing_unit;
 }
 
 .__iconspacer {
-  padding-right: 10px;
+  padding-right: $spacing_unit;
 }
 
 #mainmenu .glyphicon {
@@ -1087,6 +1099,11 @@ div[data-for*="help_for"] {
 .bootgrid-table td.select-cell {
   // overflow: visible;
   width: 30px !important;
+}
+
+html .bootgrid-table td.loading, 
+html .bootgrid-table td.no-results {
+  background-color: transparent !important;
 }
 
 .act_toggle {

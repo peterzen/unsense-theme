@@ -218,7 +218,14 @@ $line-height-base:       1.428571429; // 20/14
 $line-height-computed:   floor($font-size-base * $line-height-base);
 
 // $input-border: #e4eaec;
+$list-group-bg:                 transparent;
+$list-group-border:             $gray-dark;
+$list-group-hover-bg:           $gray-light;
+$list-group-active-color:       $text-color-accent;
 $list-group-active-border: #3498db;
+$list-group-active-bg:          $background-tertiary;
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%);
+
 $theme-path: "/ui/themes/advanced";
 
 $zindex: (
@@ -228,4 +235,4 @@ $zindex: (
   sidebar: 3,
 );
 
-$font-size-base: 13px;
+$font-size-base: 15px;

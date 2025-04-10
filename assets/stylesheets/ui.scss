@@ -68,6 +68,28 @@ button#flushAct {
   }
 }
 
+
+// table-striped default overrides
+table.table.table-striped {
+  background-color: transparent !important;
+
+  >tbody {
+    >tr:hover td {
+      // background-color: lighten($table-bg, 35%);
+    }
+
+    >tr:nth-of-type(odd) {
+      td {
+        // background-color: $table-bg;
+      }
+    }
+
+    >tr:nth-of-type(even) {
+      // background-color: $gray-darker;
+    }
+  }
+}
+
 // .page-content-main .content-box form> .table {
 //   &.table-striped {
 //     &>tbody>tr:nth-of-type(odd) td {
@@ -79,6 +101,12 @@ button#flushAct {
 //     }
 //   }
 // }
+html .table th>a.sortable,
+html .table>thead>tr>td,
+html .table>thead>tr>th {
+  font-weight: bold !important;
+}
+
 .table.opnsense_standard_table_form,
 form>.table-responsive>.table,
 form>table.table {
@@ -90,7 +118,7 @@ form>table.table {
   }
 
   // heuristic to find form labels in tables
-  >tbody tr td {
+  >tbody > tr > td {
     border-top: none;
 
     &:has([class*="fa-info-circle"]) {
@@ -104,25 +132,35 @@ form>table.table {
   }
 
   &.table-striped {
-    &>tbody>tr:nth-of-type(odd) td {
-      // background-color: $gray-darker;//$gray-lighter; //#00ff00;// rgba(0,111,255,.4);
+    >tbody>tr:not(:last-child):not(:first-child) {
+      border-bottom: 1px solid $gray-dark;
     }
 
-    &>tbody>tr:nth-of-type(even) td {
-      // background-color: yellowgreen;//; // #ff0000;// rgba(0,111,255,.4);
+    table.table.table-striped {
+      background-color: inherit !important;
+
+      >tr:nth-of-type(odd) {
+        td {
+          background-color: inherit;
+        }
+      }
+
+      >tr:nth-of-type(even) {
+        background-color: inherit;
+      }
     }
   }
 
-  table, .table {
-    background-color: transparent;
+  table,
+  .table {
+    background-color: transparent !important;
     color: $table-color;
   }
-
-
 }
 
 #allcfg+.content-box {
   .opnsense_standard_table_form {
+
     &,
     & td {
       background-color: transparent;
@@ -159,7 +197,7 @@ html .table th>a.sortable {
   background-color: $gray;
 }
 
-
+// tokenized input
 html .tokenize {
   >.tokens-container {
     // margin-top: 0px;
@@ -219,9 +257,19 @@ input#mss {
 
 html .bootgrid-table {
 
+  .bootgrid-table td {
+    text-align: left;
+  }
+
   th:hover,
   th:active {
     background: $table-bg;
+  }
+
+  th>.column-header-anchor {
+    color: $text-color-muted;
+    cursor: not-allowed;
+    text-decoration: none;
   }
 }
 
@@ -269,7 +317,7 @@ html .bootgrid-table {
 .nav {
   &.nav-tabs {
     background-color: $background-tertiary;
-    width: auto;
+    // width: auto;
     display: inline-block;
     @include border-radius(5px);
     border: none;
@@ -301,7 +349,7 @@ html .bootgrid-table {
   }
 }
 
-
+// tunables page
 table#tunable.bootgrid-table {
   table-layout: auto;
   width: 100%;
@@ -319,12 +367,14 @@ table#tunable.bootgrid-table {
 
     th,
     td {
+
+      // tunable name
+      // truncate from beginning of the string
       &:nth-child(2) {
         width: 20%;
         text-overflow: ellipsis;
         white-space: nowrap !important;
         overflow: hidden;
-        // color: $text-color-accent;
         font-weight: bold;
         direction: rtl;
         text-align: left;
@@ -362,8 +412,6 @@ table#tunable.bootgrid-table {
   }
 }
 
-
-
 .panel-default {
   .panel-footer {
     background-color: lighten($panel-bg, 5%);
@@ -371,15 +419,16 @@ table#tunable.bootgrid-table {
   }
 }
 
+// firewall rules page
 
-
+// limit length of begin/end port input fields
+// in fw rule form
 #srcbeginport,
 #srcendport {
   width: 12em;
 }
 
 /*
-// firewall rules page
 // move Apply button and message to the bottom to make it 
 // consistent with the other forms
 
@@ -397,53 +446,123 @@ table#tunable.bootgrid-table {
 }
 */
 
-a:has(i#show_all_help_formDialogdialog_dialogSubnet4),
-a:has(i#show_advanced_formDialogdialog_dialogSubnet4) {
-  display: flex;
-  flex-direction: row;
-  background-color: rgba(0, 140, 0, .4);
-  width: 100%;
-
+// "advanced mode" and "full help" toggles
+a:has(i[id*="show_"]),
+td:has(i[id*="show_"]) {
   i {
-    flex: 0 0 auto;
-    font-size: 2em;
-    color: $gray;
+    font-size: 2.5em;
+    vertical-align: middle;
 
     &.fa-toggle-on {
       color: $brand-primary;
     }
 
     &.fa-toggle-off {
-      color: $gray;
+      color: $gray-lighter;
     }
   }
 
-  small {
-    background-color: red;
+  i[id*="show_all_help"] {
+    &.fa-toggle-off::before {
+      font-size: 0.75em;
+      content: "\e085";
+      font-family: 'Glyphicons Halflings';
+    }
 
+    &.fa-toggle-on::before {
+      font-size: 0.75em;
+      content: "\e086";
+      font-family: 'Glyphicons Halflings';
+    }
   }
+
+  // #show_all_help_page::before {
+  //   content: "\e017"; // glyph: glyphicon-on
+  //   font-family: 'Glyphicons Halflings';
+  // }
 }
+
 
 // fix position of 'select all' checkbox in bootgrid tables
 .bootgrid-table th.select-cell .select-box {
   margin-bottom: 0.75em;
 }
 
-// firewall rules table
-table.table.opnsense-rules, table.table.table-striped {
-  // background: $table-bg;
-
+// firewall rules
+table.table.opnsense-rules {
   >tbody {
-    >tr:nth-of-type(even) {
 
-      &,
-      td {
-        background-color: darken($background-tertiary, 1%);
+    >tr {
+
+      td:nth-child(4),
+      // src
+      td:nth-child(6) {
+        // dest
+        color: $text-color-accent;
       }
-    }
-    >tr:hover td {
-      background-color: lighten($table-bg, 35%);
     }
   }
 }
 
+// gateways table
+table#grid-gateways>tbody>tr {
+  &.text-muted td {
+    color: $text-color-muted !important;
+  }
+
+  >td:nth-child(2) {}
+
+  >td:nth-child(6) {
+    color: $brand-primary;
+  }
+
+  >td:nth-child(8) {}
+}
+
+// interfaces overview
+html table#grid-overview {
+  table-layout: fixed;
+
+  >thead>tr>th {
+    &:nth-child(1) {
+      width: 2em;
+    }
+
+    &:nth-child(2) {
+      min-width: 6em;
+      text-align: left !important;
+    }
+
+    &:nth-child(3) {
+      // width: 2em;
+    }
+
+    &:nth-child(4) {
+      // width: 2em;
+    }
+  }
+
+  > tbody {
+
+    > tr {
+      &:has([data-original-title="Unassigned Interface"]){
+        opacity: 0.6;
+        background-color: red;
+      }
+    }
+  }
+}
+
+html #interface-selection-wrapper {
+  .bootstrap-select[style] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    display: block;
+  }
+  .bootstrap-select .dropdown-toggle  {
+    width: 100% !important;
+  }
+  
+}
+// #grid-overview > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)
