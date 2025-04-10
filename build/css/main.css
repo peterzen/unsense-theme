@@ -3002,44 +3002,56 @@ input[type=month] {
   line-height: 34px;
   line-height: 1.428571429 \0 ;
 }
-input[type=date].input-sm, .input-group-sm > input[type=date].form-control,
+input[type=date].input-sm, .input-group-sm > input[type=date].form-control, .input-group-sm > input[type=date]#plugin_search,
 .input-group-sm > input[type=date].input-group-addon,
-.input-group-sm > .input-group-btn > input[type=date].btn, .form-horizontal .form-group-sm input[type=date].form-control,
+.input-group-sm > .input-group-btn > input[type=date].btn, .form-horizontal .form-group-sm input[type=date].form-control, .form-horizontal .form-group-sm input[type=date]#plugin_search,
 input[type=time].input-sm,
 .input-group-sm > input[type=time].form-control,
+.input-group-sm > input[type=time]#plugin_search,
 .input-group-sm > input[type=time].input-group-addon,
 .input-group-sm > .input-group-btn > input[type=time].btn,
 .form-horizontal .form-group-sm input[type=time].form-control,
+.form-horizontal .form-group-sm input[type=time]#plugin_search,
 input[type=datetime-local].input-sm,
 .input-group-sm > input[type=datetime-local].form-control,
+.input-group-sm > input[type=datetime-local]#plugin_search,
 .input-group-sm > input[type=datetime-local].input-group-addon,
 .input-group-sm > .input-group-btn > input[type=datetime-local].btn,
 .form-horizontal .form-group-sm input[type=datetime-local].form-control,
+.form-horizontal .form-group-sm input[type=datetime-local]#plugin_search,
 input[type=month].input-sm,
 .input-group-sm > input[type=month].form-control,
+.input-group-sm > input[type=month]#plugin_search,
 .input-group-sm > input[type=month].input-group-addon,
 .input-group-sm > .input-group-btn > input[type=month].btn,
-.form-horizontal .form-group-sm input[type=month].form-control {
+.form-horizontal .form-group-sm input[type=month].form-control,
+.form-horizontal .form-group-sm input[type=month]#plugin_search {
   line-height: 30px;
 }
-input[type=date].input-lg, .input-group-lg > input[type=date].form-control,
+input[type=date].input-lg, .input-group-lg > input[type=date].form-control, .input-group-lg > input[type=date]#plugin_search,
 .input-group-lg > input[type=date].input-group-addon,
-.input-group-lg > .input-group-btn > input[type=date].btn, .form-horizontal .form-group-lg input[type=date].form-control,
+.input-group-lg > .input-group-btn > input[type=date].btn, .form-horizontal .form-group-lg input[type=date].form-control, .form-horizontal .form-group-lg input[type=date]#plugin_search,
 input[type=time].input-lg,
 .input-group-lg > input[type=time].form-control,
+.input-group-lg > input[type=time]#plugin_search,
 .input-group-lg > input[type=time].input-group-addon,
 .input-group-lg > .input-group-btn > input[type=time].btn,
 .form-horizontal .form-group-lg input[type=time].form-control,
+.form-horizontal .form-group-lg input[type=time]#plugin_search,
 input[type=datetime-local].input-lg,
 .input-group-lg > input[type=datetime-local].form-control,
+.input-group-lg > input[type=datetime-local]#plugin_search,
 .input-group-lg > input[type=datetime-local].input-group-addon,
 .input-group-lg > .input-group-btn > input[type=datetime-local].btn,
 .form-horizontal .form-group-lg input[type=datetime-local].form-control,
+.form-horizontal .form-group-lg input[type=datetime-local]#plugin_search,
 input[type=month].input-lg,
 .input-group-lg > input[type=month].form-control,
+.input-group-lg > input[type=month]#plugin_search,
 .input-group-lg > input[type=month].input-group-addon,
 .input-group-lg > .input-group-btn > input[type=month].btn,
-.form-horizontal .form-group-lg input[type=month].form-control {
+.form-horizontal .form-group-lg input[type=month].form-control,
+.form-horizontal .form-group-lg input[type=month]#plugin_search {
   line-height: 46px;
 }
 
@@ -3117,18 +3129,18 @@ fieldset[disabled] .checkbox label {
   padding-bottom: 7px;
   margin-bottom: 0;
 }
-.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
+.form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static#plugin_search,
 .input-group-lg > .form-control-static.input-group-addon,
-.input-group-lg > .input-group-btn > .form-control-static.btn, .form-horizontal .form-group-lg .form-control-static.form-control, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+.input-group-lg > .input-group-btn > .form-control-static.btn, .form-horizontal .form-group-lg .form-control-static.form-control, .form-horizontal .form-group-lg .form-control-static#plugin_search, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static#plugin_search,
 .input-group-sm > .form-control-static.input-group-addon,
-.input-group-sm > .input-group-btn > .form-control-static.btn, .form-horizontal .form-group-sm .form-control-static.form-control {
+.input-group-sm > .input-group-btn > .form-control-static.btn, .form-horizontal .form-group-sm .form-control-static.form-control, .form-horizontal .form-group-sm .form-control-static#plugin_search {
   padding-left: 0;
   padding-right: 0;
 }
 
-.input-sm, .input-group-sm > .form-control,
+.input-sm, .input-group-sm > .form-control, .input-group-sm > #plugin_search,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn, .form-horizontal .form-group-sm .form-control {
+.input-group-sm > .input-group-btn > .btn, .form-horizontal .form-group-sm .form-control, .form-horizontal .form-group-sm #plugin_search {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -3136,27 +3148,29 @@ fieldset[disabled] .checkbox label {
   border-radius: 3px;
 }
 
-select.input-sm, .input-group-sm > select.form-control,
+select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select#plugin_search,
 .input-group-sm > select.input-group-addon,
-.input-group-sm > .input-group-btn > select.btn, .form-horizontal .form-group-sm select.form-control {
+.input-group-sm > .input-group-btn > select.btn, .form-horizontal .form-group-sm select.form-control, .form-horizontal .form-group-sm select#plugin_search {
   height: 30px;
   line-height: 30px;
 }
 
-textarea.input-sm, .input-group-sm > textarea.form-control,
+textarea.input-sm, .input-group-sm > textarea.form-control, .input-group-sm > textarea#plugin_search,
 .input-group-sm > textarea.input-group-addon,
-.input-group-sm > .input-group-btn > textarea.btn, .form-horizontal .form-group-sm textarea.form-control,
+.input-group-sm > .input-group-btn > textarea.btn, .form-horizontal .form-group-sm textarea.form-control, .form-horizontal .form-group-sm textarea#plugin_search,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
+.input-group-sm > select[multiple]#plugin_search,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-.form-horizontal .form-group-sm select[multiple].form-control {
+.form-horizontal .form-group-sm select[multiple].form-control,
+.form-horizontal .form-group-sm select[multiple]#plugin_search {
   height: auto;
 }
 
-.input-lg, .input-group-lg > .form-control,
+.input-lg, .input-group-lg > .form-control, .input-group-lg > #plugin_search,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn, .form-horizontal .form-group-lg .form-control {
+.input-group-lg > .input-group-btn > .btn, .form-horizontal .form-group-lg .form-control, .form-horizontal .form-group-lg #plugin_search {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -3164,28 +3178,30 @@ select[multiple].input-sm,
   border-radius: 6px;
 }
 
-select.input-lg, .input-group-lg > select.form-control,
+select.input-lg, .input-group-lg > select.form-control, .input-group-lg > select#plugin_search,
 .input-group-lg > select.input-group-addon,
-.input-group-lg > .input-group-btn > select.btn, .form-horizontal .form-group-lg select.form-control {
+.input-group-lg > .input-group-btn > select.btn, .form-horizontal .form-group-lg select.form-control, .form-horizontal .form-group-lg select#plugin_search {
   height: 46px;
   line-height: 46px;
 }
 
-textarea.input-lg, .input-group-lg > textarea.form-control,
+textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > textarea#plugin_search,
 .input-group-lg > textarea.input-group-addon,
-.input-group-lg > .input-group-btn > textarea.btn, .form-horizontal .form-group-lg textarea.form-control,
+.input-group-lg > .input-group-btn > textarea.btn, .form-horizontal .form-group-lg textarea.form-control, .form-horizontal .form-group-lg textarea#plugin_search,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
+.input-group-lg > select[multiple]#plugin_search,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-.form-horizontal .form-group-lg select[multiple].form-control {
+.form-horizontal .form-group-lg select[multiple].form-control,
+.form-horizontal .form-group-lg select[multiple]#plugin_search {
   height: auto;
 }
 
 .has-feedback {
   position: relative;
 }
-.has-feedback .form-control {
+.has-feedback .form-control, .has-feedback #plugin_search {
   padding-right: 42.5px;
 }
 
@@ -3201,17 +3217,17 @@ select[multiple].input-lg,
   text-align: center;
 }
 
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > #plugin_search + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback {
+.input-group-lg > .input-group-btn > .btn + .form-control-feedback, .form-horizontal .form-group-lg .form-control + .form-control-feedback, .form-horizontal .form-group-lg #plugin_search + .form-control-feedback {
   width: 46px;
   height: 46px;
   line-height: 46px;
 }
 
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > #plugin_search + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback {
+.input-group-sm > .input-group-btn > .btn + .form-control-feedback, .form-horizontal .form-group-sm .form-control + .form-control-feedback, .form-horizontal .form-group-sm #plugin_search + .form-control-feedback {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -3225,12 +3241,12 @@ select[multiple].input-lg,
 .has-success .checkbox-inline {
   color: #00d084;
 }
-.has-success .form-control {
+.has-success .form-control, .has-success #plugin_search {
   border-color: #00d084;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-success .form-control:focus {
+.has-success .form-control:focus, .has-success #plugin_search:focus {
   border-color: rgb(0, 157, 99.6346153846);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(55, 255, 181.9230769231);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(55, 255, 181.9230769231);
@@ -3252,12 +3268,12 @@ select[multiple].input-lg,
 .has-warning .checkbox-inline {
   color: #f0ad4e;
 }
-.has-warning .form-control {
+.has-warning .form-control, .has-warning #plugin_search {
   border-color: #f0ad4e;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-warning .form-control:focus {
+.has-warning .form-control:focus, .has-warning #plugin_search:focus {
   border-color: rgb(236.015625, 151.21875, 30.984375);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(247.96875, 216.5625, 172.03125);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(247.96875, 216.5625, 172.03125);
@@ -3279,12 +3295,12 @@ select[multiple].input-lg,
 .has-error .checkbox-inline {
   color: #ff4d4f;
 }
-.has-error .form-control {
+.has-error .form-control, .has-error #plugin_search {
   border-color: #ff4d4f;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.has-error .form-control:focus {
+.has-error .form-control:focus, .has-error #plugin_search:focus {
   border-color: rgb(255, 26, 28.5730337079);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(255, 179, 179.8539325843);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgb(255, 179, 179.8539325843);
@@ -3315,7 +3331,7 @@ select[multiple].input-lg,
     margin-bottom: 0;
     vertical-align: middle;
   }
-  .form-inline .form-control, .navbar-form .form-control {
+  .form-inline .form-control, .form-inline #plugin_search, .navbar-form .form-control, .navbar-form #plugin_search {
     display: inline-block;
     width: auto;
     vertical-align: middle;
@@ -3328,10 +3344,12 @@ select[multiple].input-lg,
   .form-inline .input-group .input-group-btn,
   .navbar-form .input-group .input-group-btn,
   .form-inline .input-group .form-control,
-  .navbar-form .input-group .form-control {
+  .form-inline .input-group #plugin_search,
+  .navbar-form .input-group .form-control,
+  .navbar-form .input-group #plugin_search {
     width: auto;
   }
-  .form-inline .input-group > .form-control, .navbar-form .input-group > .form-control {
+  .form-inline .input-group > .form-control, .form-inline .input-group > #plugin_search, .navbar-form .input-group > .form-control, .navbar-form .input-group > #plugin_search {
     width: 100%;
   }
   .form-inline .control-label, .navbar-form .control-label {
@@ -4056,7 +4074,7 @@ tbody.collapse.in {
   padding-left: 0;
   padding-right: 0;
 }
-.input-group .form-control {
+.input-group .form-control, .input-group #plugin_search {
   position: relative;
   z-index: 2;
   float: left;
@@ -4066,12 +4084,14 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn,
-.input-group .form-control {
+.input-group .form-control,
+.input-group #plugin_search {
   display: table-cell;
 }
 .input-group-addon:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
-.input-group .form-control:not(:first-child):not(:last-child) {
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group #plugin_search:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
@@ -4093,14 +4113,14 @@ tbody.collapse.in {
   border: 1px solid #3a3b41;
   border-radius: 3px;
 }
-.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control,
+.input-group-addon.input-sm, .form-horizontal .form-group-sm .input-group-addon.form-control, .form-horizontal .form-group-sm .input-group-addon#plugin_search,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
 }
-.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control,
+.input-group-addon.input-lg, .form-horizontal .form-group-lg .input-group-addon.form-control, .form-horizontal .form-group-lg .input-group-addon#plugin_search,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 10px 16px;
@@ -4112,7 +4132,7 @@ tbody.collapse.in {
   margin-top: 0;
 }
 
-.input-group .form-control:first-child,
+.input-group .form-control:first-child, .input-group #plugin_search:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn-group > .btn,
@@ -4127,7 +4147,7 @@ tbody.collapse.in {
   border-right: 0;
 }
 
-.input-group .form-control:last-child,
+.input-group .form-control:last-child, .input-group #plugin_search:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn-group > .btn,
@@ -7028,7 +7048,7 @@ b {
 
 .label-opnsense {
   /* emulates btn */
-  font-size: 12px;
+  font-size: small;
   line-height: 1.5;
   display: inline-block;
   vertical-align: middle;
@@ -7497,6 +7517,7 @@ html .table th > a.sortable:active {
 
 #update_status_container textarea {
   background-color: rgb(7.1829268293, 7.5609756098, 8.3170731707);
+  padding: 0.5em 1em;
 }
 
 .dropdown-menu .divider {
@@ -7519,7 +7540,7 @@ html .tokenize > .tokens-container > .token-search {
 html .tokenize > .tokens-container > .token-search input {
   border: none;
 }
-html .tokenize.focus.form-control {
+html .tokenize.focus.form-control, html .tokenize.focus#plugin_search {
   outline: none !important;
   box-shadow: none;
   border-color: #3794ff;
@@ -7585,6 +7606,10 @@ html .bootgrid-table th > .column-header-anchor {
 }
 #mainmenu .list-group-item {
   background-color: transparent;
+}
+
+#maintabs {
+  width: 100%;
 }
 
 .nav.nav-tabs {
@@ -7701,9 +7726,13 @@ table#tunable.bootgrid-table tbody td:nth-child(6) {
   }
 }
 */
+.table > thead > tr > td > small {
+  font-weight: normal;
+}
+
 a:has(i[id*=show_]) i,
 td:has(i[id*=show_]) i {
-  font-size: 2.5em;
+  font-size: 2em;
   vertical-align: middle;
 }
 a:has(i[id*=show_]) i.fa-toggle-on,
@@ -7731,16 +7760,8 @@ td:has(i[id*=show_]) i[id*=show_all_help].fa-toggle-on::before {
   margin-bottom: 0.75em;
 }
 
-table.table.opnsense-rules > tbody > tr td:nth-child(4),
-table.table.opnsense-rules > tbody > tr td:nth-child(6) {
-  color: #ffffff;
-}
-
 table#grid-gateways > tbody > tr.text-muted td {
   color: #888888 !important;
-}
-table#grid-gateways > tbody > tr > td:nth-child(6) {
-  color: #3794ff;
 }
 html table#grid-overview {
   table-layout: fixed;
@@ -7757,17 +7778,30 @@ html table#grid-overview > tbody > tr:has([data-original-title="Unassigned Inter
   background-color: red;
 }
 
-html #interface-selection-wrapper .bootstrap-select[style] {
+.bootstrap-select[style] {
   width: 100% !important;
   max-width: 100% !important;
   box-sizing: border-box;
   display: block;
 }
-html #interface-selection-wrapper .bootstrap-select .dropdown-toggle {
+
+.bootstrap-select .dropdown-toggle {
   width: 100% !important;
 }
 
 .infos {
+  color: #888888;
+}
+
+#plugins .plugin_entry strong, #plugins .plugin_entry b {
+  font-weight: normal;
+}
+#plugins .plugin_entry td:nth-child(1) {
+  color: #ffffff;
+}
+#plugins .plugin_entry td:nth-child(3),
+#plugins .plugin_entry td:nth-child(4),
+#plugins .plugin_entry td:nth-child(5) {
   color: #888888;
 }
 

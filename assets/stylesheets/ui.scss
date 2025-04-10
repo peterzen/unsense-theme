@@ -201,6 +201,7 @@ html .table th>a.sortable {
 #update_status_container {
   textarea {
     background-color: $background-secondary;
+    padding: 0.5em 1em;
   }
 }
 
@@ -324,7 +325,9 @@ html .bootgrid-table {
     background-color: transparent;
   }
 }
-
+#maintabs {
+  width: 100%;
+}
 .nav {
   &.nav-tabs {
     background-color: $background-tertiary;
@@ -458,10 +461,13 @@ table#tunable.bootgrid-table {
 */
 
 // "advanced mode" and "full help" toggles
+.table > thead > tr > td > small {
+  font-weight: normal;
+}
 a:has(i[id*="show_"]),
 td:has(i[id*="show_"]) {
   i {
-    font-size: 2.5em;
+    font-size: 2em;
     vertical-align: middle;
 
     &.fa-toggle-on {
@@ -509,7 +515,7 @@ table.table.opnsense-rules {
       // src
       td:nth-child(6) {
         // dest
-        color: $text-color-accent;
+        // color: $text-color-accent;
       }
     }
   }
@@ -524,7 +530,7 @@ table#grid-gateways>tbody>tr {
   >td:nth-child(2) {}
 
   >td:nth-child(6) {
-    color: $brand-primary;
+    // color: $brand-primary;
   }
 
   >td:nth-child(8) {}
@@ -558,13 +564,13 @@ html table#grid-overview {
     > tr {
       &:has([data-original-title="Unassigned Interface"]){
         opacity: 0.6;
-        background-color: red;
+        // background-color: red;
       }
     }
   }
 }
 
-html #interface-selection-wrapper {
+// html #interface-selection-wrapper {
   .bootstrap-select[style] {
     width: 100% !important;
     max-width: 100% !important;
@@ -575,9 +581,28 @@ html #interface-selection-wrapper {
     width: 100% !important;
   }
   
-}
+// }
 // #grid-overview > tbody:nth-child(2) > tr:nth-child(5) > td:nth-child(2)
 
 .infos {
   color: $text-color-muted;
+}
+
+#plugins {
+  .plugin_entry {
+    strong, b {
+      font-weight: normal;
+    }
+    td:nth-child(1){
+      color: $text-color-accent;
+    }
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5){
+      color: $text-color-muted;
+    }
+  }
+}
+#plugin_search {
+  @extend .form-control;
 }

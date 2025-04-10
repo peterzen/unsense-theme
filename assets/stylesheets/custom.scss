@@ -859,7 +859,8 @@ $spacing_unit: 1em;
 
 .label-opnsense {
   /* emulates btn */
-  font-size: 12px;
+  // font-size: 12px;
+  font-size: small;
   line-height: 1.5;
   display: inline-block;
   vertical-align: middle;
