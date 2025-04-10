@@ -1,10 +1,10 @@
 {
-  "name": "opnsense-theme",
+  "name": "unsense-theme",
   "version": "1.0.0",
   "scripts": {
-    "build": "SASS_WARN_DEPRECATED=false sass assets/stylesheets/main.scss build/css/main.css --no-source-map",
-    "watch": "SASS_WARN_DEPRECATED=false sass --watch assets/stylesheets/main.scss:build/css/main.css",
-    "clean": "rm -rf build/css/*",
+    "build": "SASS_WARN_DEPRECATED=false sass src/stylesheets/main.scss files/opnsense/www/themes/unsense/build/css/main.css --no-source-map",
+    "watch": "SASS_WARN_DEPRECATED=false sass --watch src/stylesheets/main.scss:files/opnsense/www/themes/unsense/build/css/main.css",
+    "clean": "rm -rf files/opnsense/www/themes/unsense/css/*",
     "dev": "browser-sync start --proxy 'https://10.100.0.1' --files 'build/css/main.css'"
   },
   "devDependencies": {
