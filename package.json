@@ -2,16 +2,20 @@
   "name": "unsense-theme",
   "version": "1.0.0",
   "scripts": {
-    "build": "SASS_WARN_DEPRECATED=false sass src/stylesheets/main.scss files/opnsense/www/themes/unsense/build/css/main.css --no-source-map",
-    "watch": "SASS_WARN_DEPRECATED=false sass --watch src/stylesheets/main.scss:files/opnsense/www/themes/unsense/build/css/main.css",
-    "clean": "rm -rf files/opnsense/www/themes/unsense/css/*",
-    "dev": "browser-sync start --proxy 'https://10.100.0.1' --files 'build/css/main.css'"
+    "copy:fonts": "cpx 'src/fonts/**/*' files/usr/local/opnsense/www/themes/unsense/build/fonts",
+    "copy:images": "cpx 'src/images/**/*' files/usr/local/opnsense/www/themes/unsense/build/images",
+    "copy:assets": "yarn copy:fonts && yarn copy:images",
+    "build:css": "SASS_WARN_DEPRECATED=false  sass src/stylesheets/main.scss files/usr/local/opnsense/www/themes/unsense/build/css/main.css --no-source-map",
+    "build": "yarn copy:assets && yarn build:css",
+    "clean": "rm -rf files/usr/local/opnsense/www/themes/unsense/build/{css,fonts,images}",
+    "watch": "SASS_WARN_DEPRECATED=false sass --watch src/stylesheets/main.scss:files/usr/local/opnsense/www/themes/unsense/build/css/main.css",
+    "dev": "browser-sync start --proxy 'https://10.100.0.1' --files 'files/usr/local/opnsense/www/themes/unsense/build/css/main.css'"
   },
   "devDependencies": {
     "bootstrap-sass": "twbs/bootstrap-sass#v3.4.1",
     "browser-sync": "^3.0.4",
+    "cpx": "^1.5.0",
     "sass": "^1.75.0",
     "sass-formatter": "^0.7.9"
-  },
-  "dependencies": {}
+  }
 }
