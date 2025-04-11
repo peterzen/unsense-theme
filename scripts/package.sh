@@ -4,16 +4,13 @@ set -e
 PLUGIN_NAME="opnsense-theme-unsense"
 VERSION="1.0"
 PKG_NAME="${PLUGIN_NAME}-${VERSION}.txz"
+OUTDIR="~/repo/repo/FreeBSD:14:amd64"
+UNPACKED="${OUTDIR}/unpacked"
 
-OUTDIR="../../repo/FreeBSD:14:amd64"
-PKGOUT="${OUTDIR}/${PKG_NAME}"
+mkdir -p "$UNPACKED/usr/local/opnsense/www/themes/unsense"
+cp -R build/* "$UNPACKED/usr/local/opnsense/www/themes/unsense/"
 
-# cleanup
-rm -rf "$OUTDIR/unpacked"
-mkdir -p "$OUTDIR/unpacked"
-
-echo "[+] Writing +MANIFEST"
-cat > files/+MANIFEST <<EOF
+cat > "$UNPACKED/+MANIFEST" <<EOF
 name: ${PLUGIN_NAME}
 version: "${VERSION}"
 comment: "Custom OPNsense Theme"
@@ -27,17 +24,9 @@ arch: any
 origin: ${PLUGIN_NAME}
 EOF
 
-echo "[+] Building ${PKG_NAME}"
-tar --format=ustar -Jcf "$PKGOUT" -C files +MANIFEST usr
+mkdir -p "$OUTDIR"
 
-echo "[+] Extracting to build repo index"
-tar -xf "$PKGOUT" -C "$OUTDIR/unpacked"
+tar -C "$UNPACKED" -Jcf "$OUTDIR/$PKG_NAME" +MANIFEST usr
+tar -C "$UNPACKED" -Jcf "$OUTDIR/repo.txz" +MANIFEST usr
 
-echo "[+] Creating repo.txz"
-tar --format=ustar -Jcf "$OUTDIR/repo.txz" -C "$OUTDIR/unpacked" +MANIFEST usr
-
-# cleanup
-rm files/+MANIFEST
-
-echo "[✓] Package and repo index ready:"
-ls -lh "$PKGOUT" "$OUTDIR/repo.txz"
+rm -rf "$UNPACKED"
