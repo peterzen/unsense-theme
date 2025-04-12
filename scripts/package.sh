@@ -24,7 +24,5 @@ arch: any
 origin: ${PLUGIN_NAME}
 EOF
 
-mkdir -p "$OUTDIR"
-
 tar -C "$UNPACKED" -Jcf "$OUTDIR/$PKG_NAME" +MANIFEST usr
-rm -rf "$UNPACKED"
+# rm -rf "$UNPACKED"
