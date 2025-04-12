@@ -23,6 +23,6 @@ www: https://github.com/yourname/unsense-theme
 arch: any
 origin: ${PLUGIN_NAME}
 EOF
-
-tar -C "$UNPACKED" -Jcf "$OUTDIR/$PKG_NAME" +MANIFEST usr
+echo Creating "$OUTDIR/$PKG_NAME"
+tar -C "$UNPACKED" -Jcvf "$OUTDIR/$PKG_NAME" +MANIFEST usr
 # rm -rf "$UNPACKED"
