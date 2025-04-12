@@ -4,7 +4,7 @@ set -e
 PLUGIN_NAME="opnsense-theme-unsense"
 VERSION="1.0"
 PKG_NAME="${PLUGIN_NAME}-${VERSION}.txz"
-OUTDIR="docs/FreeBSD:14:amd64"
+OUTDIR="repo/FreeBSD:14:amd64"
 UNPACKED="${OUTDIR}/unpacked"
 
 mkdir -p "$UNPACKED/usr/local/opnsense/www/themes/unsense"
@@ -27,6 +27,4 @@ EOF
 mkdir -p "$OUTDIR"
 
 tar -C "$UNPACKED" -Jcf "$OUTDIR/$PKG_NAME" +MANIFEST usr
-tar -C "$UNPACKED" -Jcf "$OUTDIR/repo.txz" +MANIFEST usr
-
 rm -rf "$UNPACKED"
