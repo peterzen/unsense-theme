@@ -1,6 +1,7 @@
 {
   "name": "unsense-theme",
   "version": "1.0.0",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "copy:fonts": "cpx 'src/fonts/**/*' files/usr/local/opnsense/www/themes/unsense/build/fonts",
     "copy:images": "cpx 'src/images/**/*' files/usr/local/opnsense/www/themes/unsense/build/images",
